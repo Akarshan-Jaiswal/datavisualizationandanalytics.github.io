@@ -1,0 +1,27 @@
+<body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+    const svg = d3.select('body')
+                .append("svg"); // create svg
+
+    svg.attr('viewBox', '0 -20 100 100'); // position svg on screen
+
+    svg.append('text') // add text component to svg
+    .text('cat');   // set contents 
+    </script>
+    <svg viewBox="0 -20 200 200"></svg>
+    <script>
+    const svg2 = d3.select('svg');
+    
+    svg2.append('text') // add text component to svg
+        .text('g');    // set content 
+    
+    svg2.selectAll("text")        // only be 1 (as only single text element)
+        .data(['a', 'b', 'c'] )  // new data (old data was [g])
+    .join(
+       function(enter)  { console.log('enter called');  },
+       function(update) { console.log('update called'); },
+       function(exit)   { console.log('exit called');   } 
+    );
+    </script>
+</body>
