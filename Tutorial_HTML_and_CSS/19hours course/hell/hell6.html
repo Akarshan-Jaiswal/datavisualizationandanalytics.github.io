@@ -1,0 +1,49 @@
+<body>
+    <!-- DOCTYPE html-->
+<meta charset="utf-8">
+<style>
+  rect{
+    stroke:black ;
+    stroke-width:"1px";
+    transition: 10ms;
+    fill: yellowgreen;
+  }
+  rect:hover{
+    fill:bisque;
+    stroke: aqua;
+    stroke-width: 12px;
+  }
+</style>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>const width = window.innerWidth;
+    const height = window.innerHeight;
+        
+    const svg = d3.select('body')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height);
+    
+    const n = 100;
+    
+    svg
+      .append('g')
+      .selectAll('rect')
+      .data(d3.range(n))
+      .join('rect')
+        .attr('y', (d) => d * 35)
+        .attr('width', width)
+        .attr('height', 15);
+  
+    svg
+      .append('g')
+      .selectAll('rect')
+      .data(d3.range(n))
+      .join('rect')
+        .attr('x', (d) => d * 35)
+        .attr('width', 15)
+        .attr('height', height)
+        .attr('rect:fill',"pink");
+    
+</script>
+</body>
