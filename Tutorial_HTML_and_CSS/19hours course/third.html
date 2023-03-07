@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            body{
+                margin: 0px;
+                overflow: hidden;
+            }
+            rect{
+                stroke:black ;
+                stroke-width:"5px";
+                transition: 500ms;
+            }
+            rect:hover{
+                fill:bisque;
+                stroke: aqua;
+                stroke-width: 10px;
+            }
+            div{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body><!--
+        <div>
+            <svg width="600" height="230">
+                <rect x="10" y="10" width="40" height="200" fill="yellow" />
+                <rect x="60" y="10" width="40" height="20" fill="yellow" />
+                <rect x="110" y="10" width="40" height="180" fill="yellow" />
+                <rect x="160" y="10" width="40" height="100" fill="yellow" />
+            </svg>
+        </div>-->
+        <div>
+            <script>
+                const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+                svg.setAttribute("width",window.innerWidth);
+                svg.setAttribute("height",window.innerHeight);
+                document.body.appendChild(svg);
+
+                const mask = document.createElementNS('http://www.w3.org/2000/svg','mask');
+                mask.setAttribute("width",window.innerWidth);
+                mask.setAttribute("height",window.innerHeight);
+                mask.setAttribute("id","circle-mask")
+                svg.appendChild(mask);
+
+                const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
+                circle.setAttribute("cx",window.innerWidth/2);
+                circle.setAttribute("cy",window.innerHeight/2);
+                circle.setAttribute("r",window.innerHeight/2)
+                circle.setAttribute("fill","white")
+                mask.appendChild(circle);
+                const totalLines = 100;
+
+                for(let index = 0; index<totalLines; index++){
+                    const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+                    rect.setAttribute("width",15);
+                    rect.setAttribute("height",window.innerHeight);
+                    rect.setAttribute('x',index*30)
+                    svg.appendChild(rect);
+                }
+
+                
+                for(let index = 0; index<totalLines; index++){
+                    const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+                    rect.setAttribute("width",15);
+                    rect.setAttribute("height",window.innerHeight);
+                    rect.setAttribute('x',index*25)
+                    rect.setAttribute('mask','url(#circle-mask)')
+                    svg.appendChild(rect);
+                }
+                
+            </script>
+        </div>
+        
+        
+        
+
+    </body>
+</html>
