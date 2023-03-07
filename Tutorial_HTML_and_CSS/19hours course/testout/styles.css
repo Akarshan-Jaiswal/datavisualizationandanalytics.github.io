@@ -3,7 +3,18 @@ body {
     overflow: hidden;
   }
 .line {
-fill: none;
-stroke: steelblue;
-stroke-width: 2px;
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
 }
+rect{
+    stroke:black ;
+    stroke-width:"1px";
+    transition: 10ms;
+    fill: yellowgreen;
+  }
+rect:hover{
+    fill:bisque;
+    stroke: aqua;
+    stroke-width: 12px;
+  }
