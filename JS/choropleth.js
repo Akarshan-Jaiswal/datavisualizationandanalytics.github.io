@@ -23,7 +23,8 @@ const colorScale = d3.scaleThreshold()
 // Load external data and boot
 Promise.all([
 //d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
-d3.json("./Resources/GeoJsons/Extensive.geo.json"),
+//d3.json("./Resources/GeoJsons/Extensive.geo.json"),
+d3.json("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/0fc1e7546891c72229284fc3b27d192a62bad4b7/Resources/GeoJsons/Extensive.geojson"),
 d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
     data.set(d.code, +d.pop)
 })]).then(function(loadData){
