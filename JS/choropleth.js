@@ -28,7 +28,7 @@ d3.json("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationand
 //d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
 d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/25918413839b04f05c92aa011480707a805533f7/Dataset/Average_cases/total.csv", function(d) {
     //data.set(d.code, +d.pop)
-    data.set(d.location, +d.total_cases)
+    data.set(d.iso_code, +d.total_cases)
 })]).then(function(loadData){
     let topo = loadData[0]
 
