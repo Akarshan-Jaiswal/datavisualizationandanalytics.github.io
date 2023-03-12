@@ -25,7 +25,7 @@ const colorScale = d3.scaleThreshold()
     //d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
 //d3.json("./Resources/GeoJsons/Extensive.geo.json"),
 //d3.json("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/0fc1e7546891c72229284fc3b27d192a62bad4b7/Resources/GeoJsons/world.geojson"),
-d3.json(git_path+"Resources/GeoJsons/world.geojson"),
+d3.json(git_path+"Resources/GeoJsons/Extensive.geojson"),
 //d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
 d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/22d80dbd66f2a54936e53e4f019b3f188504c760/Dataset/Average_cases/total.csv", function(d) {
     //data.set(d.code, +d.pop)
@@ -82,7 +82,7 @@ d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationanda
       )
       // set the color of each country
       .attr("fill", function (d) {
-        d.total = data.get(d.id) || 0;
+        d.total = data.get(d.properties.iso_a3) || 0;
         return colorScale(d.total);
       })
       .style("stroke", "transparent")
