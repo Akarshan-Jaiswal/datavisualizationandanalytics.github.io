@@ -12,11 +12,11 @@ const svg = d3.select("#my_dataviz1")
       `translate(${linechart_margin.left}, ${linechart_margin.top})`);
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+d3.csv(git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv",
 
 // When reading the csv, I must format variables:
 function(d){
-return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.World }
 }).then(
 
 // Now I can use this dataset:
@@ -32,7 +32,7 @@ xAxis = svg.append("g")
 
 // Add Y axis
 const y = d3.scaleLinear()
-  .domain([0, d3.max(data, function(d) { return +d.value; })])
+  .domain([0, d3.max(data, function(d) { return +d.World; })])
   .range([ linechart_height, 0 ]);
 yAxis = svg.append("g")
   .call(d3.axisLeft(y));
@@ -64,7 +64,7 @@ line.append("path")
   .attr("stroke-width", 1.5)
   .attr("d", d3.line()
     .x(function(d) { return x(d.date) })
-    .y(function(d) { return y(d.value) })
+    .y(function(d) { return y(d.World) })
     )
 
 // Add the brushing
@@ -100,7 +100,7 @@ function updateChart(event,d) {
       .duration(1000)
       .attr("d", d3.line()
         .x(function(d) { return x(d.date) })
-        .y(function(d) { return y(d.value) })
+        .y(function(d) { return y(d.World) })
       )
 }
 
@@ -113,7 +113,7 @@ svg.on("dblclick",function(){
     .transition()
     .attr("d", d3.line()
       .x(function(d) { return x(d.date) })
-      .y(function(d) { return y(d.value) })
+      .y(function(d) { return y(d.World) })
   )
 });
 
