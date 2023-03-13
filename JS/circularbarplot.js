@@ -1,6 +1,6 @@
 
 // set the dimensions and margins of the graph
-const circular_bar_plot_margin = {top: 100, right: 0, bottom: 0, left: 0},
+const circular_bar_plot_margin = {top: 100, right: 90, bottom: 90, left: 90},
     circular_bar_plot_width = window.innerHeight - circular_bar_plot_margin.left - circular_bar_plot_margin.right,
     circular_bar_plot_height = window.innerHeight - circular_bar_plot_margin.top - circular_bar_plot_margin.bottom,
     circular_bar_plot_innerRadius = 90,
@@ -24,7 +24,7 @@ d3.csv(git_path+"/Dataset/Average_cases/total_for_continents.csv").then( functio
       .domain(data.map(d => d.continent)); // The domain of the X axis is the list of states.
   const circular_bar_plot_y = d3.scaleRadial()
       .range([circular_bar_plot_innerRadius, circular_bar_plot_outerRadius])   // Domain will be define later.
-      .domain([0, 160000000]); // Domain of Y is from 0 to the max seen in the data
+      .domain([0, 7000000]); // Domain of Y is from 0 to the max seen in the data
 
   // Add the bars
   circular_bar_plot_svg.append("g")

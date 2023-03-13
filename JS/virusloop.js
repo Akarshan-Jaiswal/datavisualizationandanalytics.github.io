@@ -17,4 +17,4 @@ d3.select('#svg_loop').select('image')
   .transition()
   .duration(3000)
   .attrTween("transform", () => d3.interpolateString("rotate(0, 200, 200)", "rotate(360, 200, 200)")) // rotate the image for 3 seconds around the center point
-  .repeat(Infinity)
+  //.repeat(Infinity)
