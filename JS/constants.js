@@ -3,4 +3,5 @@ git_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationan
 const margin = {top: 10, right: 30, bottom: 30, left: 60},
 width = window.innerWidth -20 - margin.left - margin.right,
 height = window.innerHeight -120  - margin.top - margin.bottom;
+var picked_color="";
 

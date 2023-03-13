@@ -2,6 +2,7 @@ const linechart_margin = {top: 10, right: 30, bottom: 30, left: 60},
 linechart_width = window.innerWidth -20 - linechart_margin.left - linechart_margin.right,
 linechart_height = window.innerHeight -120  - linechart_margin.top - linechart_margin.bottom;
 
+
 // append the svg object to the body of the page
 const svg = d3.select("#my_dataviz1")
 .append("svg")

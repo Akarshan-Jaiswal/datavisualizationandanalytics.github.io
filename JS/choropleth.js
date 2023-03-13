@@ -29,7 +29,7 @@ d3.json(git_path+"Resources/GeoJsons/Extensive.geojson"),
 //d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
 d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/22d80dbd66f2a54936e53e4f019b3f188504c760/Dataset/Average_cases/total.csv", function(d) {
     //data.set(d.code, +d.pop)
-    data.set(d.iso_code, +d.total_cases)
+    data.set(d.location, +d.total_cases)
 })]).then(function(loadData){
     let topo = loadData[0]
 
@@ -68,6 +68,8 @@ d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationanda
       .style("stroke", "black")
       .attr('transform', d3.zoomTransform(this))
     console.log(this)
+    picked_color=d3.select(this).get("fill");
+    
   }
 
   // Draw the map
@@ -82,7 +84,7 @@ d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationanda
       )
       // set the color of each country
       .attr("fill", function (d) {
-        d.total = data.get(d.properties.iso_a3) || 0;
+        d.total = data.get(d.properties.name) || 0;
         return colorScale(d.total);
       })
       .style("stroke", "transparent")
