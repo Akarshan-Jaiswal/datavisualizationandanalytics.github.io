@@ -17,7 +17,7 @@ d3.csv(git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv",
 
 // When reading the csv, I must format variables:
 function(d){
-return { date : d3.timeParse("%Y-%m-%d")(d.date), World : d.World }
+return { date : d3.timeParse("%Y-%m-%d")(d.date), World : d.World}
 }).then(
 
 // Now I can use this dataset:
@@ -66,7 +66,10 @@ line.append("path")
   .attr("d", d3.line()
     .x(function(d) { return x(d.date) })
     .y(function(d) { return y(d.World) })
-    )
+    ).style("transform", "scale(0.001, 0.001)")
+    .transition()
+      .duration(2000)
+      .style("transform", null)
 
 // Add the brushing
 line

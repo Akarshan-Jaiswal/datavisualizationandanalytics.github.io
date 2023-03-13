@@ -67,9 +67,7 @@ d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationanda
       .style("opacity", 1)
       .style("stroke", "black")
       .attr('transform', d3.zoomTransform(this))
-    console.log(this)
-    picked_color=d3.select(this).get("fill");
-    
+    console.log(d3.select(this).attr('_group'))
   }
 
   // Draw the map
@@ -92,7 +90,18 @@ d3.csv("https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationanda
       .style("opacity", 1)
       .on("mouseover", mouseOver )
       .on("mouseleave", mouseLeave )
-      .on("click",countryClick).call(zoom)
+      .on("click",countryClick)
+      //.style("transform", "scale(0.001, 0.001)").transition().duration(1500).style("transform", null)
+      .call(zoom);
+    
+    choropleth_svg.append("rect").attr("x", window.innerWidth-10 )
+    .attr("y", 10 )
+    .attr("width", 100).attr("height", 10)
+    .style("fill", "#transparent" )
+    .style("stroke", "#69b3a2" ).text("Hello, world!")
+    .style("text-align", "center")
+    .style("line-height", "320px")
+    .style("font-size", "100px").attr("fill", "green")//.on("click",refresh_map_click())
 
 })
 

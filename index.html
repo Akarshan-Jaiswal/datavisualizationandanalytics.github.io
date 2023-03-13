@@ -4,7 +4,56 @@
         <meta charset="utf-8">
         <title>Coursework 1 [F20DV-F21DV CW1]</title>
         <style>
-            
+        
+            line{
+                transition: all 3000ms;
+            }
+            line:hover{
+                fill:rgb(47, 255, 116);
+                stroke-width: 10px;
+            }
+
+            .btn{
+            width: 200px;
+            height: 60px;
+            background: none;
+            border: 4px solid;
+            color: #3498db;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            }
+
+            .btn::before,.btn::after{
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 4px;
+            background: #353b48;
+            transform: skewX(50deg);
+            transition: .4s linear;
+            }
+
+            .btn::before{
+            top: -4px;
+            left: 10%;
+            }
+
+            .btn::after{
+            bottom: -4px;
+            right: 10%;
+            }
+
+            .btn:hover::before{
+            left: 80%;
+            }
+
+            .btn:hover::after{
+            right: 80%;
+            }
+
         </style>
     </head>
     <body>
@@ -20,19 +69,24 @@
         <script type="text/javascript" src="./JS/d3.v7.js"></script>
         <script type="text/javascript" src="./JS/constants.js"></script>
         <script type="text/javascript" src="./JS/zoom.js"></script>
-        <div id="svg_loop" wi></div>
-        <script type="text/javascript" src="./JS/virusloop.js"></script>
-        <div id="my_dataviz1" wi></div>
-        <script type="text/javascript" src="./JS/linechart_ex.js"></script>
+
         <div id="my_dataviz2" wi></div>
         <script type="text/javascript" src="./JS/choropleth.js"></script>
-        <div id="my_circular_bar_plot" wi></div>
-        <script type="text/javascript" src="./JS/circularbarplot.js"></script>
+
+        <div id="my_dataviz1" wi></div>
+        <script type="text/javascript" src="./JS/linechart_ex.js"></script>
         <div id="scatterplot" wi>
             <input type="number" id="buttonXlim" value=9>
             <div id="my_scatter_plot" wi></div>
             <script type="text/javascript" src="./JS/scatterplot.js"></script>
         </div>
+        
+        <div id="svg_loop" wi></div>
+        <script type="text/javascript" src="./JS/virusloop.js"></script>
+        
+        <div id="my_circular_bar_plot" wi></div>
+        <script type="text/javascript" src="./JS/circularbarplot.js"></script>
+        
         <script type="text/javascript" src="./JS/buttonswitcher.js"></script>
     </body>
 </html>

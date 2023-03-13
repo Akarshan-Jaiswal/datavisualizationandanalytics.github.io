@@ -40,6 +40,10 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/ir
       .attr("r", 10)
       .style("fill", "#transparent" )
       .style("stroke", "#69b3a2" )
+      .style("transform", "scale(0.001, 0.001)")
+      .transition()
+        .duration(1500)
+        .style("transform", null)
 
 
   // A function that update the plot for a given xlim value
