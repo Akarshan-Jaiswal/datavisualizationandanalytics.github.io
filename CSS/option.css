@@ -1,0 +1,38 @@
+loading_{
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+}
+.cov_virus_div{
+    width: 20%;
+    height: 20%;
+    margin:auto;
+    visibility: hidden;
+}
+.cov_virus{
+    width: 25%;
+    height: 50%;
+    position: fixed;
+    background-image: url(./../Resources/SVG/covid-19.svg);
+    background-repeat: no-repeat;
+    animation: cov_virus_ani 6s linear infinite;
+    visibility: hidden;
+}
+@keyframes cov_virus_ani {
+    
+    to{
+        transform: rotate(360deg);
+    }
+}
+.resizer{ /* resizer triangle */
+    border-left:   9px solid transparent;
+    border-top:    9px solid transparent;
+    border-right:  9px solid rgba(255,0,0,0.4);
+    border-bottom: 9px solid rgba(255,0,0,0.4);
+    opacity: 1;
+  
+    width: 0px;
+    height: 0px;
+    animation: none;}
