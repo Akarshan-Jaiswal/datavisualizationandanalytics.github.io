@@ -5,12 +5,14 @@
     <title>Coursework 1 [F20DV-F21DV CW1]</title>
     <link rel="stylesheet" href="./CSS/landingstyle.css">
     <link rel="stylesheet" href="./CSS/option.css">
+    <link rel="stylesheet" href="./CSS/topbutton.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Akarshan Jaiswal">
 
   </head>
   <body>
     <script type="text/javascript" src="./JS/d3.v7.js"></script>
+    <button onclick="topFunction()" id="To_topBtn" title="Scrole Back to top">Back to Beginning</button>
     <script type="text/javascript" src="./JS/constants.js"></script>
     <script type="text/javascript" src="./JS/zoom.js"></script>
     <div class="landing-page">
@@ -24,29 +26,22 @@
         <div>Get Started</div>
         <div>Get Started</div>
       </div>
-    </div>
+    </div><!--
     <div class="text">
       <p>Please fill text here</p>
     </div>
-    <div id="loading_">
-      <div class="cov_virus_div">
-        <span class="cov_virus"></span>
-      </div>
-    </div>
     <div class="text">
       <p>Please fill text here 2</p>
-    </div>
-
+    </div>-->
     
     <div id="choropleth_div" wi></div>
     <script type="text/javascript" src="./JS/choropleth.js"></script>
     <div id="linechart_div" wi></div>
     <script type="text/javascript" src="./JS/linechart.js"></script>
 
-
     
     <div id="scatterplot" wi>
-        <input type="number" id="buttonXlim" value=9>
+        <input type="number" id="scatter_input" value=9>
         <div id="my_scatter_plot" wi></div>
         <script type="text/javascript" src="./JS/scatterplot.js"></script>
     </div>
@@ -55,5 +50,7 @@
     <script type="text/javascript" src="./JS/circularbarplot.js"></script>
     
     <script type="text/javascript" src="./JS/buttonswitcher.js"></script>
+
+    
   </body>
 </html>

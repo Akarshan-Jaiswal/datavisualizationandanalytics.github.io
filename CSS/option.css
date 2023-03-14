@@ -1,24 +1,21 @@
-loading_{
+#loading_{
     top: 50%;
     left: 50%;
-    position: fixed;
+    position: absolute;
     transform: translate(-50%,-50%);
-    visibility: hidden;
 }
-.cov_virus_div{
+#cov_virus_div{
     width: 20%;
     height: 20%;
     margin:auto;
-    visibility: hidden;
 }
-.cov_virus{
+.cov_virus::after{
     width: 25%;
     height: 50%;
-    position: fixed;
+    position: absolute;
     background-image: url(./../Resources/SVG/covid-19.svg);
     background-repeat: no-repeat;
     animation: cov_virus_ani 6s linear infinite;
-    visibility: hidden;
 }
 @keyframes cov_virus_ani {
     

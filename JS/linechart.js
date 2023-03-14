@@ -1,3 +1,4 @@
+
 const linechart_margin = {top: 50, right: 60, bottom: 30, left: 80},
     linechart_width = window.innerWidth -20 - linechart_margin.left - linechart_margin.right,
     linechart_height = window.innerHeight -120  - linechart_margin.top - linechart_margin.bottom;
@@ -15,6 +16,16 @@ const linechart_margin = {top: 50, right: 60, bottom: 30, left: 80},
     
 createLineChart(selected_country,linechart_width,linechart_height,line_chart_svg,git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv");
 function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
+    chart_svg.selectAll("g").remove()
+
+    chart_svg.append("svg")
+        .attr("width", chart_width + linechart_margin.left + linechart_margin.right)
+        .attr("height", chart_height + linechart_margin.top + linechart_margin.bottom)
+        .attr("id","line_chart")
+        .append("g")
+        .attr("transform",
+            `translate(${linechart_margin.left}, ${linechart_margin.top})`);
+
     const data_parameter= parameter || "";
     //Read the data
     d3.csv(csv_path,

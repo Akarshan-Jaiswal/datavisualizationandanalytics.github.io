@@ -4,4 +4,24 @@ const margin = {top: 10, right: 30, bottom: 30, left: 60},
 width = window.innerWidth -20 - margin.left - margin.right,
 height = window.innerHeight -120  - margin.top - margin.bottom;
 var picked_color="";
-var selected_country="";
+var selected_country="United Kingdom";
+
+// Get the button
+let To_topBtn = document.getElementById("To_topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    To_topBtn.style.display = "block";
+  } else {
+    To_topBtn.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
