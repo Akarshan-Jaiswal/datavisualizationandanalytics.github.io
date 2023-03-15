@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-const scatter_plot_margin = {top: 10, right: 30, bottom: 30, left: 60},
+const scatter_plot_margin = {top: 10, right: 60, bottom: 120, left: 90},
     scatter_plot_width = window.innerWidth - scatter_plot_margin.left - scatter_plot_margin.right,
     scatter_plot_height = window.innerHeight - scatter_plot_margin.top - scatter_plot_margin.bottom;
 

@@ -12,7 +12,7 @@
   </head>
   <body>
     <script type="text/javascript" src="./JS/d3.v7.js"></script>
-    <button onclick="topFunction()" id="To_topBtn" title="Scrole Back to top">Back to Beginning</button>
+    <button id="To_topBtn" onclick="scrollerFunction()"></button>
     <script type="text/javascript" src="./JS/constants.js"></script>
     <script type="text/javascript" src="./JS/zoom.js"></script>
     <div class="landing-page">
@@ -20,9 +20,9 @@
         <svg class="logo"></svg>
         <h1>Covid Data Analysis [F20DV-F21DV CW1] </h1>
         <p>Data Analysis and Visual representation of Covid pandamic</p>
-        <div id="choropleth_button">Covid Map</div>
-        <div id="linechart_button">Time distribution of Covid cases</div>
-        <div id="experimental">experimental</div>
+        <div id="choropleth_button" onclick="toChoroplethFunction()">Covid Map</div>
+        <div id="linechart_button" onclick="toLineChartFunction()">Time distribution of Covid cases</div>
+        <div id="scatterplot_button" onclick="toScatterPlotFunction()">Scatter plots</div>
         <div>Get Started</div>
         <div>Get Started</div>
       </div>
@@ -50,11 +50,15 @@
     <div id="streamgraph_div" wi></div>
     <script type="text/javascript" src="./JS/streamgraph.js"></script>
 
+    <div id="loopmap_div" wi></div>
+    <script type="text/javascript" src="./JS/loopplayer.js"></script>
     <div id="my_circular_bar_plot" wi></div>
     <script type="text/javascript" src="./JS/circularbarplot.js"></script>
 
     
-    <script type="text/javascript" src="./JS/buttonswitcher.js"></script>
+
+    <!--
+    <script type="text/javascript" src="./JS/buttonswitcher.js"></script>-->
 
     
   </body>

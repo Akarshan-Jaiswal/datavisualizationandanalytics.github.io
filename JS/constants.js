@@ -13,15 +13,34 @@ let To_topBtn = document.getElementById("To_topBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if ((document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+  &&(document.body.scrollTop<window.innerHeight+20)) {
     To_topBtn.style.display = "block";
-  } else {
+    To_topBtn.textContent = "Back to Top";
+    To_topBtn.title = "Scrole Back to Top";
+    To_topBtn.onclick=topFunction;
+  }else {
     To_topBtn.style.display = "none";
   }
 }
 
 // When the user clicks on the button, scroll to the top of the document
+function scrollerFunction(){
+
+}
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+function toChoroplethFunction() {
+    document.body.scrollTop = window.innerHeight-20;
+    document.documentElement.scrollTop = window.innerHeight-20;
+}
+function toLineChartFunction() {
+    document.body.scrollTop = (2*window.innerHeight)-70;
+    document.documentElement.scrollTop = (2*window.innerHeight)-70;
+}
+function toScatterPlotFunction() {
+  document.body.scrollTop = (3*window.innerHeight)-220;
+  document.documentElement.scrollTop = (3*window.innerHeight)-220;
 }

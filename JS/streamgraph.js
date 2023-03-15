@@ -1,6 +1,6 @@
 
 // set the dimensions and margins of the graph
-const streamgraph_margin = {top: 20, right: 30, bottom: 0, left: 10},
+const streamgraph_margin = {top: 50, right: 30, bottom: 20, left: 10},
     streamgraph_width = window.innerWidth - streamgraph_margin.left - streamgraph_margin.right,
     streamgraph_height = window.innerHeight - streamgraph_margin.top - streamgraph_margin.bottom;
 

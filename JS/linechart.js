@@ -16,7 +16,8 @@ const linechart_margin = {top: 50, right: 60, bottom: 30, left: 80},
     
 createLineChart(selected_country,linechart_width,linechart_height,line_chart_svg,git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv");
 function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
-    chart_svg.selectAll("g").remove()
+    chart_svg.selectAll("text").remove();
+    chart_svg.selectAll("g").remove();
 
     chart_svg.append("svg")
         .attr("width", chart_width + linechart_margin.left + linechart_margin.right)
@@ -60,7 +61,7 @@ function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
     .attr("text-anchor", "end")
     .attr("x", chart_width/2)
     //.attr("y", linechart_)
-    .text("Total Cases");
+    .text("Total Cases of "+selected_country).style("font-family","montserrat,sans-serif");
 
     // Add Y axis
     const y = d3.scaleLinear()
