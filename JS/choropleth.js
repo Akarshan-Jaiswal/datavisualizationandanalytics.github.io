@@ -1,3 +1,4 @@
+//Making Map
 const choropleth_svg = d3.select("#choropleth_div").append("svg")
 .style('background','radial-gradient(circle, rgba(32,123,142,1) 0%, rgba(9,33,121,1) 48%, rgba(2,0,36,1) 88%)');
     choropleth_svg.attr("width",window.innerWidth);
@@ -9,6 +10,7 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
   choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
     [1000,10000,50000,100000,250000,750000,1000000,1000000000],git_path+"Resources/GeoJsons/Extensive.geojson",
     git_path+"Dataset/Average_cases/total.csv",0,[["mouseover",function (d) {console.log(d3.select(this).attr("id"));}]],0)
+
   function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_path,csv_path,map_state,map_funtions,info_rect){
     if (info_rect===0){
       map_svg.append("g").attr("id","rect_g").attr("class", "item").append("rect")
@@ -33,20 +35,12 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
   const colorScale = d3.scaleThreshold()
         .domain(scale_domain)
         .range(d3.schemeReds[9]);
-      
-  //const data_csv=d3.csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv");
-  //const test_2=[data_csv];
-  //console.log(test2);
-  //const test=d3.group(data_csv, a=>a.location);
-  //console.log(data_csv);
+
       // Load external data and boot
       Promise.all([d3.json(geojson_path),
       d3.csv(csv_path, function(d) {
-      //d3.csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv", function(d) {
       data.set(d.location, +d.total_cases)
-      //data.set(d.location, +d.total_cases, +d.new_cases,+d.gdp_per_capita,d.population_density,d.life_expectancy)
   })]).then(function(loadData){
-    //console.log(loadData[0]);
       let topo = loadData[0]
   
       let mouseOver = function(d) {
@@ -87,7 +81,6 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
         .duration(200)
         .style("stroke", "")
       if(info_rect===0){
-          //d3.select("#info_rect").selectAll("g").remove();
           d3.select("#info_rect").transition()
           .duration(100)
           .style("opacity", 0)
@@ -105,7 +98,6 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
         .duration(200)
         .style("opacity", 1)
         .style("stroke", "black")
-      console.log(d3.select(this).attr("id"))
       selected_country=d3.select(this).attr("id");
       createLineChart(selected_country,linechart_width,linechart_height,line_chart_svg,git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv");
       d3.select('body').transition()

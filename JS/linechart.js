@@ -55,14 +55,14 @@ function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
     .attr("y", chart_height - 6)
     .text("Date and Time");
 
-    // Add county title 
+    // Add Chart title 
     chart_svg.append("text")
     .attr("class", "x label")
     .attr("text-anchor", "end")
     .attr("x", chart_width/2)
-    //.attr("y", linechart_)
     .text("Total Cases of "+selected_country).style("font-family","montserrat,sans-serif");
 
+    // Background text 
     chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")

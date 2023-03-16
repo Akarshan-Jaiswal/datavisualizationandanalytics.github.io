@@ -37,6 +37,7 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
     .call(d3.axisBottom(x).tickSize(-chart_height*.7).tickValues(tick_list))
     .select(".domain").remove()
 
+    // Add title for the chart. 
     chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
@@ -44,6 +45,7 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
         .attr("y", 0)
         .text("Streamgraph").style("font-family","montserrat,sans-serif");
 
+    //Background Text.
     chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")

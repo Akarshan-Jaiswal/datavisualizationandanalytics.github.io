@@ -13,9 +13,7 @@ const scatter_plot_svg = d3.select("#scatterplot_div")
     .attr("transform",
           `translate(${scatter_plot_margin.left}, ${scatter_plot_margin.top})`);
 
-const csv_pathe="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/iris.csv";
-let data_path=git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv";
-data_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/scatter_plot_data_multi.csv"
+let data_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/scatter_plot_data_multi.csv"
 createScatterPlot("gdp_per_capita","reproduction_rate",scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_inputX","scatter_inputY")
 function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_svg,csv_path,input_idX,input_idY){
     chart_svg.selectAll("g").remove();
@@ -46,15 +44,16 @@ function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_
         chart_svg.append("g")
         .call(d3.axisLeft(scatter_plot_y));
 
+        // Add Y axis label
         chart_svg.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")
         .attr("y", 6)
         .attr("x", 135)
         .attr("dy", ".75em")
-        //.attr("transform", "rotate(-90)")
         .text(parameter2).style("font-family","montserrat,sans-serif");
 
+        // Add X axis label
         chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
@@ -62,6 +61,7 @@ function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_
         .attr("y", chart_height - 6)
         .text(parameter1).style("font-family","montserrat,sans-serif");
 
+        // Add title for the chart. 
         chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
@@ -69,6 +69,7 @@ function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_
         .attr("y", -50)
         .text("Scatter-plot for "+parameter1+" vs "+parameter2).style("font-family","montserrat,sans-serif");
 
+        //Background text
         chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
@@ -102,7 +103,6 @@ function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_
             .transition()
             .duration(1500)
             .style("transform", null)
-
 
         // A function that update the plot for a given scatter_update value
         function updatePlotX() {
@@ -142,7 +142,7 @@ function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_
 
         // Add an event listener to the button created in the html part
         d3.select("#"+input_idX).on("input", updatePlotX )
-
         d3.select("#"+input_idY).on("input", updatePlotY )
     })
 }
+
