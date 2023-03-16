@@ -14,11 +14,16 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if ((document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-  &&(document.body.scrollTop<window.innerHeight+20)) {
+  &&(document.documentElement.scrollTop < window.innerHeight+20)) {
     To_topBtn.style.display = "block";
     To_topBtn.textContent = "Back to Top";
     To_topBtn.title = "Scrole Back to Top";
     To_topBtn.onclick=topFunction;
+  }else if ((document.body.scrollTop > window.innerHeight+20 || document.documentElement.scrollTop > window.innerHeight+20)) {
+    To_topBtn.style.display = "block";
+    To_topBtn.textContent = "Back to Map";
+    To_topBtn.title = "Scrole Back to Map";
+    To_topBtn.onclick=toChoroplethFunction;
   }else {
     To_topBtn.style.display = "none";
   }

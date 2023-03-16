@@ -15,9 +15,9 @@ const scatter_plot_svg = d3.select("#scatterplot_div")
 
 const csv_pathe="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/iris.csv";
 const data_path=git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv"
-//createScatterPlot("Sepal_Length","Petal_Length",scatter_plot_width,scatter_plot_height,scatter_plot_svg,csv_pathe,"scatter_input")
+createScatterPlot("Sepal_Length","Petal_Length",scatter_plot_width,scatter_plot_height,scatter_plot_svg,csv_pathe,"scatter_input")
 //createScatterPlot("Africa","Africa",scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_input")
-createScatterPlot(selected_country,selected_country,scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_input")
+//createScatterPlot(selected_country,selected_country,scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_input")
 function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_svg,csv_path,input_id){
     chart_svg.selectAll("g").remove();
 
