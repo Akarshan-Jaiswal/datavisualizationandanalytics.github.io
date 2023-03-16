@@ -13,7 +13,7 @@ const streamgraph_svg = d3.select("#streamgraph_div")
     .attr("transform",
           `translate(${streamgraph_margin.left}, ${streamgraph_margin.top})`);
 //const dummy_path="https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered_wide.csv";
-const dummy_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/date_continent_total_cases.csv";
+const dummy_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/date_continent_total_cases_M.csv";
 //createStreamGraph(streamgraph_height,streamgraph_width,streamgraph_svg,dummy_path,[1900, 1925, 1975, 2000]);
 createStreamGraph(streamgraph_height,streamgraph_width,streamgraph_svg,dummy_path,[2020, 2021, 2022, 2023]);
 function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list){
@@ -88,8 +88,8 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
 
     // Add Y axis
     const y = d3.scaleLinear()
-    //.domain([-100000, 100000])
-    .domain([-min_y, max_y])
+    .domain([-1000000, 1000000])
+    //.domain([-max_y, max_y])
     .range([ chart_height, 0 ]);
 
     // color palette
