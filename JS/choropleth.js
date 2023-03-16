@@ -108,7 +108,6 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
       console.log(d3.select(this).attr("id"))
       selected_country=d3.select(this).attr("id");
       createLineChart(selected_country,linechart_width,linechart_height,line_chart_svg,git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv");
-      createScatterPlot(selected_country,selected_country,scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_input")
       d3.select('body').transition()
       .duration(1500)
       .style("transform", null);

@@ -12,9 +12,7 @@ const streamgraph_svg = d3.select("#streamgraph_div")
   .append("g")
     .attr("transform",
           `translate(${streamgraph_margin.left}, ${streamgraph_margin.top})`);
-//const dummy_path="https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered_wide.csv";
 const dummy_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/date_continent_total_cases_M.csv";
-//createStreamGraph(streamgraph_height,streamgraph_width,streamgraph_svg,dummy_path,[1900, 1925, 1975, 2000]);
 createStreamGraph(streamgraph_height,streamgraph_width,streamgraph_svg,dummy_path,[2020, 2021, 2022, 2023]);
 function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list){
     chart_svg.selectAll("g").remove();
@@ -38,6 +36,23 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
     .attr("transform", `translate(0, ${chart_height*0.8})`)
     .call(d3.axisBottom(x).tickSize(-chart_height*.7).tickValues(tick_list))
     .select(".domain").remove()
+
+    chart_svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", chart_width/2)
+        .attr("y", 0)
+        .text("Streamgraph").style("font-family","montserrat,sans-serif");
+
+    chart_svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", chart_width-(chart_width/20))
+        .attr("y", 160)
+        .text("This shows the contribution of different continents in overall covid cases throughout its year of spread.")
+        .style("font-family","montserrat,sans-serif").style("opacity",0.3).style("font-size", "23px")
+        .transition().duration(15000).style("transform", "scale(0.001, 0.001)");
+
     // Customization
     chart_svg.selectAll(".tick line").attr("stroke", "#b8b8b8")
 
@@ -46,33 +61,21 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
     data.forEach((item) => 
     {
         if(item.Africa>max_y){
-            console.log("Africa");
-            console.log(item.Africa);
             max_y=item.Africa;
         }
         else if(item.Asia>max_y){
-            console.log("Asia");
-            console.log(item.Asia);
             max_y=item.Asia;
         }
         else if(item.Europe>max_y){
-            console.log("Europe");
-            console.log(item.Europe);
             max_y=item.Europe;
         }
         else if(item.Oceania>max_y){
-            console.log("Ocenia");
-            console.log(item.Oceania);
             max_y=item.Oceania;
         }
         else if(item["North America"]>max_y){
-            console.log("NA");
-            console.log(item["North America"]);
             max_y=item["North America"];
         }
         else if(item["South America"]>max_y){
-            console.log("SA");
-            console.log(item["South America"]);
             max_y=item["South America"];
         }
         }

@@ -49,3 +49,6 @@ function toScatterPlotFunction() {
   document.body.scrollTop = (3*window.innerHeight)-220;
   document.documentElement.scrollTop = (3*window.innerHeight)-220;
 }
+function toStreamGraphFunction() {
+  document.body.scrollTop = (4*window.innerHeight)-220;
+  document.documentElement.scrollTop = (4*window.innerHeight)-220;}

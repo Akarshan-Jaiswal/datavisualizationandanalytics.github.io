@@ -63,6 +63,24 @@ function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
     //.attr("y", linechart_)
     .text("Total Cases of "+selected_country).style("font-family","montserrat,sans-serif");
 
+    chart_svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", chart_width-(chart_width/20))
+        .attr("y", 160)
+        .text("The following Line Chart displays the growth of the overall total cases reported of corona virus in "+selected_country+" throughout years of spread.")
+        .style("font-family","montserrat,sans-serif").style("opacity",0.3).style("font-size", "23px")
+        .transition().duration(15000).style("transform", "scale(0.001, 0.001)");
+
+    chart_svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", chart_width-(chart_width/20))
+        .attr("y", 210)
+        .text("We can veiw data for other countries by selecting other countries from the map.")
+        .style("font-family","montserrat,sans-serif").style("opacity",0.3).style("font-size", "23px")
+        .transition().duration(15000).style("transform", "scale(0.001, 0.001)");
+
     // Add Y axis
     const y = d3.scaleLinear()
     .domain([0, d3.max(data, function(d) { return +d.data_parameter; })])

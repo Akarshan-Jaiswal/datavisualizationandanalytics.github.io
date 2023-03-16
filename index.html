@@ -22,8 +22,7 @@
         <div id="choropleth_button" onclick="toChoroplethFunction()">Covid Map</div>
         <div id="linechart_button" onclick="toLineChartFunction()">Time distribution of Covid cases</div>
         <div id="scatterplot_button" onclick="toScatterPlotFunction()">Scatter plots</div>
-        <div>Get Started</div>
-        <div>Get Started</div>
+        <div id="streamgraph_button" onclick="toStreamGraphFunction()">Total Contribution of continents in cases</div>
       </div>
     </div><!--
     <div class="text">
@@ -39,9 +38,14 @@
     <script type="text/javascript" src="./JS/linechart.js"></script>
 
     
-    <div id="scatterplot" wi>
-        <input type="number" id="scatter_input" value=9>
+    <div id="scatterplot" class="text" wi>
+      <div display="inline-block">
+        <h2>Change X Axis</h2>
+        <input type="number" id="scatter_inputX">
+        <h2>Change Y Axis</h2>
+        <input type="number" id="scatter_inputY">
         <div id="scatterplot_div" wi></div>
+      </div>
         <script type="text/javascript" src="./JS/scatterplot.js"></script>
     </div>
 
