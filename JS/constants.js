@@ -38,12 +38,12 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 function toChoroplethFunction() {
-    document.body.scrollTop = window.innerHeight-20;
-    document.documentElement.scrollTop = window.innerHeight-20;
+    document.body.scrollTop = window.innerHeight-40;
+    document.documentElement.scrollTop = window.innerHeight-40;
 }
 function toLineChartFunction() {
-    document.body.scrollTop = (2*window.innerHeight)-70;
-    document.documentElement.scrollTop = (2*window.innerHeight)-70;
+    document.body.scrollTop = (2*window.innerHeight)-100;
+    document.documentElement.scrollTop = (2*window.innerHeight)-100;
 }
 function toScatterPlotFunction() {
   document.body.scrollTop = (3*window.innerHeight)-220;

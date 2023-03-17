@@ -42,18 +42,29 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("x", chart_width/2)
-        .attr("y", 0)
+        .attr("y", 20)
         .text("Streamgraph").style("font-family","montserrat,sans-serif");
 
     //Background Text.
     chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
-        .attr("x", chart_width-(chart_width/20))
+        .attr("x", (chart_width-(chart_width/4)))
         .attr("y", 160)
         .text("This shows the contribution of different continents in overall covid cases throughout its year of spread.")
-        .style("font-family","montserrat,sans-serif").style("opacity",0.3).style("font-size", "23px")
-        .transition().duration(15000).style("transform", "scale(0.001, 0.001)");
+        .style("font-family","montserrat,sans-serif").style("opacity",0).style("font-size", "23px")
+        //.transition().duration(150).style("transform", "scale(0.001, 0.001)");
+    
+    //adding information Rectangle
+    chart_svg.append("g").attr("id","rect_stg").attr("class", "item").append("rect")
+        .attr("id","info_rect_stg")
+        .attr("x",chart_width/3)
+        .attr("y",(chart_height-(chart_height/10)))
+        .attr("width",chart_width/3)
+        .attr("height",chart_height/15)
+        .style("fill","orange")
+        .style("top",1)
+        .style("opacity", 0.9)
 
     // Customization
     chart_svg.selectAll(".tick line").attr("stroke", "#b8b8b8")
@@ -108,29 +119,32 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
     .keys(keys)
     (data)
 
-    // create a tooltip
-    const Tooltip = chart_svg
-    .append("text")
-    .attr("x", 0)
-    .attr("y", 0)
-    .style("opacity", 0)
-    .style("font-size", 17)
 
     // Three function that change the tooltip when user hover / move / leave a cell
     const mouseover = function(event,d) {
-    Tooltip.style("opacity", 1)
     d3.selectAll(".myArea").style("opacity", .2)
     d3.select(this)
         .style("stroke", "black")
         .style("opacity", 1)
+    d3.select("#rect_stg").selectAll("text").remove()
+    d3.select("#info_rect_stg").transition()
+        .duration(200)
+        .style("opacity", .8).style("stroke", "black");
+    d3.select("#rect_stg").append("text").text("Selected Continent : "+d3.select(this).attr("id"))
+        .attr("x",chart_width/2.8).attr("y",(chart_height-(chart_height/10))+35)
+        .style("font-size", "35px").style("font-family", "montserrat").style("opacity", 0.7)
+        .style("text-align", "center").style("top",3).transition()
+        .duration(200);
     }
     const mousemove = function(event,d,i) {
     grp = d.key
-    Tooltip.text(grp)
     }
     const mouseleave = function(event,d) {
-    Tooltip.style("opacity", 0)
     d3.selectAll(".myArea").style("opacity", 1).style("stroke", "none")
+    d3.select("#info_rect_stg").transition()
+    .duration(100)
+    .style("opacity", 0)
+    d3.select("#rect_stg").selectAll("text").remove()
     }
 
     // Area generator
@@ -145,6 +159,7 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
     .data(stackedData)
     .join("path")
         .attr("class", "myArea")
+        .attr("id",function(d) { return d.key; })
         .style("fill", function(d) { return color(d.key); })
         .attr("d", area)
         .on("mouseover", mouseover)

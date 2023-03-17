@@ -63,7 +63,7 @@ function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
     .text("Total Cases of "+selected_country).style("font-family","montserrat,sans-serif");
 
     // Background text 
-    chart_svg.append("text")
+    /* chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("x", chart_width-(chart_width/20))
@@ -79,7 +79,7 @@ function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
         .attr("y", 210)
         .text("We can veiw data for other countries by selecting other countries from the map.")
         .style("font-family","montserrat,sans-serif").style("opacity",0.3).style("font-size", "23px")
-        .transition().duration(15000).style("transform", "scale(0.001, 0.001)");
+        .transition().duration(15000).style("transform", "scale(0.001, 0.001)"); */
 
     // Add Y axis
     const y = d3.scaleLinear()

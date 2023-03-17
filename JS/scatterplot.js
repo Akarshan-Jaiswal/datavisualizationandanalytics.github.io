@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 const scatter_plot_margin = {top: 90, right: 60, bottom: 120, left: 90},
-    scatter_plot_width = window.innerWidth-120 - scatter_plot_margin.left - scatter_plot_margin.right,
-    scatter_plot_height = window.innerHeight-200 - scatter_plot_margin.top - scatter_plot_margin.bottom;
+    scatter_plot_width = window.innerWidth-90 - scatter_plot_margin.left - scatter_plot_margin.right,
+    scatter_plot_height = window.innerHeight-120 - scatter_plot_margin.top - scatter_plot_margin.bottom;
 
 // append the svg object to the body of the page
 const scatter_plot_svg = d3.select("#scatterplot_div")
@@ -14,8 +14,8 @@ const scatter_plot_svg = d3.select("#scatterplot_div")
           `translate(${scatter_plot_margin.left}, ${scatter_plot_margin.top})`);
 
 let data_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/scatter_plot_data_multi.csv"
-createScatterPlot("gdp_per_capita","reproduction_rate",scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_inputX","scatter_inputY")
-function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_svg,csv_path,input_idX,input_idY){
+createScatterPlot("gdp_per_capita","reproduction_rate","location",scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_inputX","scatter_inputY")
+function createScatterPlot(parameter1,parameter2,parameter3,chart_width,chart_height,chart_svg,csv_path,input_idX,input_idY){
     chart_svg.selectAll("g").remove();
 
     chart_svg.append("svg")
@@ -69,40 +69,71 @@ function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_
         .attr("y", -50)
         .text("Scatter-plot for "+parameter1+" vs "+parameter2).style("font-family","montserrat,sans-serif");
 
-        //Background text
-        chart_svg.append("text")
-        .attr("class", "x label")
-        .attr("text-anchor", "end")
-        .attr("x", chart_width-(chart_width/20))
-        .attr("y", 160)
-        .text("The aim of the following Scatter plot is to show the variance in the reproduction rate of the virus in countries with variyng Gross Domestic Products.")
-        .style("font-family","montserrat,sans-serif").style("opacity",0.3).style("font-size", "23px")
-        .transition().duration(15000).style("transform", "scale(0.001, 0.001)");
-
-        chart_svg.append("text")
-        .attr("class", "x label")
-        .attr("text-anchor", "end")
-        .attr("x", chart_width-(chart_width/20))
-        .attr("y", 210)
-        .text("In the following Scatter plot we have additional functionality to adjust Xlims and Ylims to have more Information or zoom in or out about the dataset.")
-        .style("font-family","montserrat,sans-serif").style("opacity",0.3).style("font-size", "23px")
-        .transition().duration(15000).style("transform", "scale(0.001, 0.001)");
+        //adding information Rectangle
+        chart_svg.append("g").attr("id","rect_sc").attr("class", "item").append("rect")
+        .attr("id","info_rect_sc")
+        .attr("x",chart_width-(chart_width-80))
+        .attr("y",(chart_height-(chart_height-60))/2)
+        .attr("width",chart_width-(chart_width-10)/2)
+        .attr("height",chart_height/5)
+        .style("fill","yellow")
+        .style("top",1)
+        .style("opacity", 0)
 
 
+        //adding Hover and Click Functions
+        let mouseOver=function(d){
+            d3.select("#rect_sc").selectAll("text").remove()
+            d3.select("#info_rect_sc").transition()
+            .duration(200)
+            .style("opacity", .8).style("stroke", "black");
+            d3.select("#rect_sc").append("text").text("Selected Data: ")
+            .attr("x",chart_width-(chart_width-90)).attr("y",(chart_height-(chart_height-60)))
+            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.7)
+            .style("text-align", "center").style("top",3).transition()
+            .duration(200);
+            d3.select("#rect_sc").append("text").text(d3.select(this).attr("id"))
+            .attr("x",chart_width-(chart_width-90)).attr("y",(chart_height-(chart_height-60))+20)
+            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.7)
+            .style("text-align", "center").style("top",3).transition()
+            d3.select("#rect_sc").append("text").text("Click to see the Total Cases over time for it.")
+            .attr("x",chart_width-(chart_width-90)).attr("y",(chart_height-(chart_height-60))+50)
+            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.7)
+            .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+        }
+        let mouseLeave = function(d) {
+                d3.select("#info_rect_sc").transition()
+                .duration(100)
+                .style("opacity", 0)
+                d3.select("#rect_sc").selectAll("text").remove()
+          }
+        let mouseClick = function(d){
+            selected_country=(d3.select(this).attr('id')).substring(0,(d3.select(this).attr('id')).indexOf("="))
+            console.log(selected_country);
+            createLineChart(selected_country,linechart_width,linechart_height,line_chart_svg,git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv");
+            toLineChartFunction();
+        }
         // Add dots
-        chart_svg.append('g')
+        let dots=chart_svg.append('g')
         .selectAll("dot")
         .data(data)
         .join("circle")
             .attr("cx", function (d) { return scatter_plot_x(d[parameter1]); } )
             .attr("cy", function (d) { return scatter_plot_y(d[parameter2]); } )
-            .attr("r", 4)
-            .style("fill", "blue" )
+            .attr("id", function (d) { return (d[parameter3]+"="+parameter2+"("+Number(d[parameter2]).toFixed(2)+") / "+parameter1+"("+Number(d[parameter1]).toFixed(2)+")")})
+            .attr("r", 6)
+            .style("fill", function(d){ if (d[parameter3]===selected_country){
+                return "red"
+            }
+                return "blue"
+            } )
             .style("stroke", "#69b3a2" )
-            .style("transform", "scale(0.001, 0.001)")
-            .transition()
-            .duration(1500)
-            .style("transform", null)
+        dots.on('mouseover',mouseOver).on('mouseleave',mouseLeave).on('click',mouseClick);
+        dots.style("transform", "scale(0.001, 0.001)")
+        .transition()
+        .duration(1500)
+        .style("transform", null);
 
         // A function that update the plot for a given scatter_update value
         function updatePlotX() {
@@ -128,7 +159,7 @@ function createScatterPlot(parameter1,parameter2,chart_width,chart_height,chart_
             scatter_updateY = this.value
     
             // Update X axis
-            scatter_plot_x.domain([0,scatter_updateY])
+            scatter_plot_y.domain([0,scatter_updateY])
             scatter_plot_xAxis.transition().duration(1000).call(d3.axisBottom(scatter_plot_x))
     
             // Update chart

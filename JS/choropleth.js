@@ -9,10 +9,11 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
 
   choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
     [1000,10000,50000,100000,250000,750000,1000000,1000000000],git_path+"Resources/GeoJsons/Extensive.geojson",
-    git_path+"Dataset/Average_cases/total.csv",0,[["mouseover",function (d) {console.log(d3.select(this).attr("id"));}]],0)
+    git_path+"Dataset/Average_cases/total.csv",0,["",""],0)
 
   function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_path,csv_path,map_state,map_funtions,info_rect){
     if (info_rect===0){
+      //adding information Rectangle
       map_svg.append("g").attr("id","rect_g").attr("class", "item").append("rect")
       .attr("id","info_rect")
       .attr("x",map_width-(map_width-80))
@@ -43,6 +44,7 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
   })]).then(function(loadData){
       let topo = loadData[0]
   
+      //Hover functions
       let mouseOver = function(d) {
       d3.selectAll(".Country")
         .transition()
@@ -88,6 +90,7 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
         }
     }
   
+    //Click function
     let countryClick = function(d) {
       d3.selectAll(".Country")
         .transition()
@@ -122,6 +125,8 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
           return colorScale(d.total);
         })
         .attr("id", function (d) {return d.properties.name;
+        })
+        .attr("title", function (d) {return d.properties.name;
         })
         .style("stroke", "transparent")
         .attr("class", function(d){ return "Country" } )
