@@ -13,8 +13,8 @@ const scatter_plot_svg = d3.select("#scatterplot_div")
     .attr("transform",
           `translate(${scatter_plot_margin.left}, ${scatter_plot_margin.top})`);
 
-let data_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/scatter_plot_data_multi.csv"
-createScatterPlot("gdp_per_capita","reproduction_rate","location",scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_inputX","scatter_inputY")
+let data_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/scatter_plot_data_multi_full.csv"
+createScatterPlot("gdp_per_capita","stringency_index","location",scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_inputX","scatter_inputY")
 function createScatterPlot(parameter1,parameter2,parameter3,chart_width,chart_height,chart_svg,csv_path,input_idX,input_idY){
     chart_svg.selectAll("g").remove();
 
@@ -72,10 +72,12 @@ function createScatterPlot(parameter1,parameter2,parameter3,chart_width,chart_he
         //adding information Rectangle
         chart_svg.append("g").attr("id","rect_sc").attr("class", "item").append("rect")
         .attr("id","info_rect_sc")
-        .attr("x",chart_width-(chart_width-80))
-        .attr("y",(chart_height-(chart_height-60))/2)
+        //.attr("x",chart_width-(chart_width-80))
+        .attr("x",chart_width-(chart_width/2)+10)
+        //.attr("y",(chart_height-(chart_height-60))/2)
+        .attr("y",-85)
         .attr("width",chart_width-(chart_width-10)/2)
-        .attr("height",chart_height/5)
+        .attr("height",chart_height/6)
         .style("fill","yellow")
         .style("top",1)
         .style("opacity", 0)
@@ -83,32 +85,47 @@ function createScatterPlot(parameter1,parameter2,parameter3,chart_width,chart_he
 
         //adding Hover and Click Functions
         let mouseOver=function(d){
+            d3.select(this).style("fill","pink").transition()
+            .duration(400);
             d3.select("#rect_sc").selectAll("text").remove()
             d3.select("#info_rect_sc").transition()
             .duration(200)
             .style("opacity", .8).style("stroke", "black");
             d3.select("#rect_sc").append("text").text("Selected Data: ")
-            .attr("x",chart_width-(chart_width-90)).attr("y",(chart_height-(chart_height-60)))
-            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.7)
+            //.attr("x",chart_width-(chart_width-90))
+            .attr("x",chart_width-(chart_width/2)+30)
+            //.attr("y",(chart_height-(chart_height-60)))
+            .attr("y",-55)
+            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.6)
             .style("text-align", "center").style("top",3).transition()
             .duration(200);
             d3.select("#rect_sc").append("text").text(d3.select(this).attr("id"))
-            .attr("x",chart_width-(chart_width-90)).attr("y",(chart_height-(chart_height-60))+20)
-            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.7)
+            //.attr("x",chart_width-(chart_width-90))
+            .attr("x",chart_width-(chart_width/2)+30)
+            //.attr("y",(chart_height-(chart_height-60))+20)
+            .attr("y",-20)
+            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.6)
             .style("text-align", "center").style("top",3).transition()
             d3.select("#rect_sc").append("text").text("Click to see the Total Cases over time for it.")
-            .attr("x",chart_width-(chart_width-90)).attr("y",(chart_height-(chart_height-60))+50)
-            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.7)
+            .attr("x",chart_width-(chart_width/2)+30)
+            //.attr("x",chart_width-(chart_width-90))
+            //.attr("y",(chart_height-(chart_height-60))+50)
+            .attr("y",10)
+            .style("font-size", "20px").style("font-family", "montserrat").style("opacity", 0.6)
             .style("text-align", "center").style("top",3).transition()
           .duration(200);
         }
         let mouseLeave = function(d) {
+            d3.select(this).style("fill","blue").transition()
+            .duration(600);
                 d3.select("#info_rect_sc").transition()
                 .duration(100)
                 .style("opacity", 0)
                 d3.select("#rect_sc").selectAll("text").remove()
           }
         let mouseClick = function(d){
+            d3.select(this).style("fill","red").transition()
+            .duration(400);
             selected_country=(d3.select(this).attr('id')).substring(0,(d3.select(this).attr('id')).indexOf("="))
             console.log(selected_country);
             createLineChart(selected_country,linechart_width,linechart_height,line_chart_svg,git_path+"Dataset/Processed_files/Time_distributed/total_cases.csv");

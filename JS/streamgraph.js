@@ -1,6 +1,6 @@
 
 // set the dimensions and margins of the graph
-const streamgraph_margin = {top: 50, right: 30, bottom: 20, left: 10},
+const streamgraph_margin = {top: 50, right: 50, bottom: 20, left: 50},
     streamgraph_width = window.innerWidth - streamgraph_margin.left - streamgraph_margin.right,
     streamgraph_height = window.innerHeight - streamgraph_margin.top - streamgraph_margin.bottom;
 
@@ -41,9 +41,9 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
     chart_svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
-        .attr("x", chart_width/2)
+        .attr("x", chart_width*(2/3))
         .attr("y", 20)
-        .text("Streamgraph").style("font-family","montserrat,sans-serif");
+        .text("Streamgraph for Total Contribution of continents in cases.").style("font-family","montserrat,sans-serif");
 
     //Background Text.
     chart_svg.append("text")
