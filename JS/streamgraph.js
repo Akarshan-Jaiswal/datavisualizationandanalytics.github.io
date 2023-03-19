@@ -43,7 +43,8 @@ function createStreamGraph(chart_height,chart_width,chart_svg,csv_path,tick_list
         .attr("text-anchor", "end")
         .attr("x", chart_width*(2/3))
         .attr("y", 20)
-        .text("Streamgraph for Total Contribution of continents in cases.").style("font-family","montserrat,sans-serif");
+        .text("Streamgraph for Total Contribution of continents in cases for COVID-19.")
+        .style("font-family","montserrat,sans-serif").style("font-weight", 900);
 
     //Background Text.
     chart_svg.append("text")

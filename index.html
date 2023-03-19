@@ -59,11 +59,33 @@
 
     <!-- This div element contains a scatterplot visualization of Covid data by cases and deaths -->
     <div id="scatterplot" class="text" wi>
+    <div>
+        
+    </div>
         <div display="inline-block">
             <!-- These inputs allow the user to select the axes they want to see on the scatter plot-->
-            <h2>Change X Axis</h2>
+            <select name="parameter 1" id="parameter_sc_1" onchange="selection_sc()">
+                <option value="">--Please choose an option for X axis--</option>
+                <option value="new_cases">New Cases</option>
+                <option value="reproduction_rate">Reproduction Rate</option>
+                <option value="gdp_per_capita">Gdp per Capita</option>
+                <option value="stringency_index">Stringency Index</option>
+                <option value="total_cases">Total Cases</option>
+                <option value="population">Population</option>
+            </select>
+            <select name="parameter 2" id="parameter_sc_2" onchange="selection_sc()">
+                <option value="">--Please choose an option for Y axis--</option>
+                <option value="new_cases">New Cases</option>
+                <option value="reproduction_rate">Reproduction Rate</option>
+                <option value="gdp_per_capita">Gdp per Capita</option>
+                <option value="stringency_index">Stringency Index</option>
+                <option value="total_cases">Total Cases</option>
+                <option value="population">Population</option>
+            </select>
+            <button id="scp_selection" onclick="submit_sc()"> Submit / Refresh plot</button>
+            <label>Change X Axis</label>
             <input type="number" id="scatter_inputX">
-            <h2>Change Y Axis</h2>
+            <label>Change Y Axis</label>
             <input type="number" id="scatter_inputY">
             
             <!-- This div element contains the scatter plot visualization-->

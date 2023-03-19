@@ -16,6 +16,7 @@ const scatter_plot_svg = d3.select("#scatterplot_div")
 let data_path="https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1_test_branch/Dataset/Processed/scatter_plot_data_multi_full.csv"
 createScatterPlot("gdp_per_capita","stringency_index","location",scatter_plot_width,scatter_plot_height,scatter_plot_svg,data_path,"scatter_inputX","scatter_inputY")
 function createScatterPlot(parameter1,parameter2,parameter3,chart_width,chart_height,chart_svg,csv_path,input_idX,input_idY){
+    chart_svg.selectAll("text").remove();
     chart_svg.selectAll("g").remove();
 
     chart_svg.append("svg")
@@ -67,7 +68,7 @@ function createScatterPlot(parameter1,parameter2,parameter3,chart_width,chart_he
         .attr("text-anchor", "end")
         .attr("x", chart_width/2)
         .attr("y", -50)
-        .text("Scatter-plot for "+parameter1+" vs "+parameter2).style("font-family","montserrat,sans-serif");
+        .text("Scatter-plot for "+parameter1+" vs "+parameter2).style("font-family","montserrat,sans-serif").style("font-size", "30px").style("font-weight", 900);
 
         //adding information Rectangle
         chart_svg.append("g").attr("id","rect_sc").attr("class", "item").append("rect")

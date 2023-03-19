@@ -60,7 +60,7 @@ function createLineChart(parameter,chart_width,chart_height,chart_svg,csv_path){
     .attr("class", "x label")
     .attr("text-anchor", "end")
     .attr("x", chart_width/2)
-    .text("Total Cases of "+selected_country).style("font-family","montserrat,sans-serif");
+    .text("Total Cases of "+selected_country).style("font-family","montserrat,sans-serif").style("font-weight", 900);
 
     // Background text 
     /* chart_svg.append("text")

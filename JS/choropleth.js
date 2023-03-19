@@ -8,7 +8,7 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
     const choropleth_height = +choropleth_svg.attr("height");
 
   choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
-    [1000,10000,50000,100000,250000,750000,1000000,1000000000],git_path+"Resources/GeoJsons/Extensive.geojson",
+    [1000,10000,50000,100000,250000,750000,1000000,50000000],git_path+"Resources/GeoJsons/Extensive.geojson",
     git_path+"Dataset/Average_cases/total.csv",0,["",""],0)
 
   function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_path,csv_path,map_state,map_funtions,info_rect){
@@ -23,6 +23,56 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
       .style("fill","grey")
       .style("top",1)
       .style("opacity", 0)
+
+      map_svg.append("g").attr("id","rect_g_2").attr("class", "item").append("rect")
+      .attr("id","info_rect_2")
+      .attr("x",map_width-(map_width-80))
+      .attr("y",map_height/5)
+      .attr("width",map_width/7)
+      .attr("height",map_height/5)
+      .style("fill","white")
+      .style("top",1)
+      .style("opacity", 0)
+
+      map_svg.append("g").attr("id","rect_g_3").attr("class", "item").append("rect")
+      .attr("id","info_rect_3")
+      .attr("x",map_width-(map_width-80))
+      .attr("y",map_height/10)
+      .attr("width",map_width/9)
+      .attr("height",map_height/11)
+      .style("fill","beige")
+      .style("top",1)
+      .style("opacity", 1)
+      d3.select("#rect_g_3").append("text").text("Density of Covid cases")
+      .attr("x",map_width-(map_width-85)).attr("y",(map_height/10)+25)
+      .style("font-size", "20px").style("font-family", "montserrat").style("font-weight", 900)
+      .style("text-align", "center")
+      d3.select("#rect_g_3").append("text").text("throughout the world.")
+      .attr("x",map_width-(map_width-85)).attr("y",(map_height/10)+45)
+      .style("font-size", "20px").style("font-family", "montserrat").style("font-weight", 900)
+      .style("text-align", "center")
+
+      map_svg.append("g").attr("id","rect_g_4").attr("class", "item").append("rect")
+      .attr("id","info_rect_4")
+      .attr("x",map_width-(map_width-80))
+      .attr("y",map_height-(map_height/9))
+      .attr("width",map_width/4)
+      .attr("height",map_height/10)
+      .style("fill","beige")
+      .style("top",1)
+      .style("opacity", 0.8)
+      d3.select("#rect_g_4").append("text").text("We can observe the biggest contributors of Covid cases")
+      .attr("x",map_width-(map_width-85)).attr("y",map_height-(map_height/9)+18)
+      .style("font-size", "20px").style("font-family", "montserrat")
+      .style("text-align", "center")
+      d3.select("#rect_g_4").append("text").text("are the countries with prominent sea routes, High GDP")
+      .attr("x",map_width-(map_width-85)).attr("y",map_height-(map_height/9)+35)
+      .style("font-size", "20px").style("font-family", "montserrat")
+      .style("text-align", "center")
+      d3.select("#rect_g_4").append("text").text("and large population density which eases spread of virus.")
+      .attr("x",map_width-(map_width-85)).attr("y",map_height-(map_height/9)+52)
+      .style("font-size", "20px").style("font-family", "montserrat")
+      .style("text-align", "center")
     }
   // Map and projection
   const map_path = d3.geoPath();
@@ -70,6 +120,50 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
           .style("font-size", "23px").style("font-family", "montserrat")
           .style("text-align", "center").style("top",3).transition()
           .duration(200);
+
+          d3.select("#info_rect_2").transition()
+          .duration(200)
+          .style("opacity", 1).style("stroke", "black").style("fill",d3.select(this).attr("fill"));
+          d3.select("#rect_g_2").append("text").text("The colour represents")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+20)
+          .style("font-size", "20px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+          d3.select("#rect_g_2").append("text").text("the total contribution of")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+35)
+          .style("font-size", "18px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+          d3.select("#rect_g_2").append("text").text(d3.select(this).attr("id")+" in")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+50)
+          .style("font-size", "18px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+          d3.select("#rect_g_2").append("text").text("Covid cases throughout the years")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+65)
+          .style("font-size", "18px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+          d3.select("#rect_g_2").append("text").text("throughout the years.")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+80)
+          .style("font-size", "18px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+          d3.select("#rect_g_2").append("text").text("Note: The darker colour represents")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+120)
+          .style("font-size", "18px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+          d3.select("#rect_g_2").append("text").text("the greater percentage of")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+135)
+          .style("font-size", "18px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
+          d3.select("#rect_g_2").append("text").text("Covid cases in the region")
+          .attr("x",map_width-(map_width-90)).attr("y",(map_height/5)+150)
+          .style("font-size", "18px").style("font-family", "montserrat")
+          .style("text-align", "center").style("top",3).transition()
+          .duration(200);
         }
     }
   
@@ -87,6 +181,11 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
           .duration(100)
           .style("opacity", 0)
           d3.select("#rect_g").selectAll("text").remove()
+
+          d3.select("#info_rect_2").transition()
+          .duration(100)
+          .style("opacity", 0)
+          d3.select("#rect_g_2").selectAll("text").remove()
         }
     }
   
