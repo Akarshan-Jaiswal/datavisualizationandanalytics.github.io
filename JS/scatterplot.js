@@ -68,7 +68,8 @@ function createScatterPlot(parameter1,parameter2,parameter3,chart_width,chart_he
         .attr("text-anchor", "end")
         .attr("x", chart_width/2)
         .attr("y", -50)
-        .text("Scatter-plot for "+parameter1+" vs "+parameter2).style("font-family","montserrat,sans-serif").style("font-size", "30px").style("font-weight", 900);
+        .text("Scatter-plot for "+parameter1.replaceAll("_"," ")+" vs "+parameter2.replaceAll("_"," "))
+        .style("font-family","montserrat,sans-serif").style("font-size", "30px").style("font-weight", 900);
 
         //adding information Rectangle
         chart_svg.append("g").attr("id","rect_sc").attr("class", "item").append("rect")
