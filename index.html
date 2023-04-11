@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
     <head>
+        <!-- This meta tag sets character encoding for the document -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- The title element defines the title of the document --> 
+        <title>Coursework 2 [F20DV-F21DV CW2]</title>
+
+        <!-- These link tags connect external CSS files with the HTML document -->
+        <link rel="stylesheet" href="./CSS/driver.css">
     </head>
     <body>
         <script src="https://d3js.org/d3.v7.min.js"></script>
-        <div id="choropleth_div" wi></div>
-        <script type="text/javascript" src="./JS/choropleth.js"></script>
+        <button id="floating-previous" class="floating-btn floating-btn-left" onclick="openTab(event, 'tab-1')" style="display: none;" style="opacity: 0;"><</button>
+        <button id="floating-next" class="floating-btn floating-btn-right" onclick="openTab(event, 'tab-2')">></button>
+        <script type="text/javascript" src="./JS/constants.js"></script>
+        <div id="tab-1" class="tab-pane active" data-internalid=1 data-position="start">
+            <h2>Tab 1 Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nunc tellus. Donec vitae consectetur sem.</p>
+        </div>
+        
+        <div id="tab-2" class="tab-pane" data-internalid=2 data-position="mid">
+            <div id="choropleth_div" wi></div>
+            <script type="text/javascript" src="./JS/choropleth.js"></script>
+        </div>
+        
+        <div id="tab-3" class="tab-pane" data-internalid=3 data-position="end">
+            <div id="bubblemap_div" wi></div>
+            <script type="text/javascript" src="./JS/bubblemap.js"></script>
+        </div>
     </body>
 </html>

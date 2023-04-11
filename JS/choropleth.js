@@ -1,17 +1,12 @@
 //Making Map
 const choropleth_svg = d3.select("#choropleth_div").append("svg")
 .style('background','radial-gradient(circle, rgba(2,0,36,1) 8%, rgba(41,78,209,1) 31%, rgba(3,7,8,1) 82%)');
-    choropleth_svg.attr("width",window.innerWidth);
-    choropleth_svg.attr("height",window.innerHeight-100);
-    choropleth_svg.attr("id","map");
+    choropleth_svg.attr("width",window.innerWidth-35);
+    choropleth_svg.attr("height",window.innerHeight-120);
+    choropleth_svg.attr("id","globe_map");
     const choropleth_width = +choropleth_svg.attr("width")
     const choropleth_height = +choropleth_svg.attr("height");
 
-  /*choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
-    [1000,10000,50000,100000,250000,750000,1000000,50000000],git_path+"Resources/GeoJsons/Extensive.geojson",
-    git_path+"Dataset/Average_cases/total.csv",0,["",""],0)
-*/
-var selected_country = ""
 choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
   [1000,10000,50000,100000,250000,750000,1000000,50000000],
   "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1/Resources/GeoJsons/world.geojson",
@@ -19,7 +14,6 @@ choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
   ["location","total_cases"],0,[["",""]])
   function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_path,csv_path,csv_var,map_state,map_funtions){
   // Map and projection
-  //const map_path = d3.geoPath();
   var stop_rotation = false;
   var is_clicked =false;
   const initialScale = 250;
@@ -38,17 +32,6 @@ choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
     .attr("cy", map_height/2)
     .attr("r", initialScale)
 
-  // globe.call(d3.drag().on('drag', () => {
-  //   const rotate = map_projection.rotate()
-  //   const sensitivity = 90
-  //   const k = sensitivity / map_projection.scale()
-  //   map_projection.rotate([
-  //     rotate[0] + d3.pointer(event)[0] * k,
-  //     rotate[1] - d3.pointer(event)[1] * k
-  //   ])
-  //   path = d3.geoPath().projection(map_projection)
-  //   map_svg.selectAll("path").attr("d", path)
-  // }))
   globe.call(d3.drag().on('drag', (event) => {
     const rotate = map_projection.rotate();
     const lambda = d3.scaleLinear()
@@ -128,6 +111,7 @@ choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
           .style("opacity", 1)
           .style("stroke", "black")
       selected_country=d3.select(this).attr("id");
+      console.log("this is the selected country:" + selected_country)
       d3.select('body').transition()
         .duration(1500)
         .style("transform", null);
@@ -187,7 +171,7 @@ choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
         ]);
         path = d3.geoPath().projection(map_projection);
         map_svg.selectAll("path").attr("d", path);
-        //map_projection.scale(initialScale);
+        map_projection.scale(initialScale);
         }else{
           map_projection.scale(2.7*((initialScale*2)/5));
         }
