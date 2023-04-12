@@ -7,6 +7,11 @@ const choropleth_svg = d3.select("#choropleth_div").append("svg")
     const choropleth_width = +choropleth_svg.attr("width")
     const choropleth_height = +choropleth_svg.attr("height");
 
+/*choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
+  [1000,10000,50000,100000,250000,750000,1000000,50000000],
+  "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1/Resources/GeoJsons/world.geojson",
+  "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/22d80dbd66f2a54936e53e4f019b3f188504c760/Dataset/Average_cases/total.csv",
+  ["location","total_cases"],0,[["",""]])*/
 choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
   [1000,10000,50000,100000,250000,750000,1000000,50000000],
   "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1/Resources/GeoJsons/world.geojson",
