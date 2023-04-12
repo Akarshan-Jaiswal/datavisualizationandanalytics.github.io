@@ -1,10 +1,10 @@
 const bubblemap_svg = d3.select("#bubblemap_div").append("svg")
 //.style('background','radial-gradient(circle, rgba(2,0,36,1) 8%, rgba(41,78,209,1) 31%, rgba(3,7,8,1) 82%)');
-    bubblemap_svg.attr("width",window.innerWidth-50);
+    bubblemap_svg.attr("width",window.innerWidth);
     bubblemap_svg.attr("height",window.innerHeight-120);
     bubblemap_svg.attr("id","bubblemap");
-    const bubblemap_width = +choropleth_svg.attr("width")
-    const bubblemap_height = +choropleth_svg.attr("height");
+    const bubblemap_width = +bubblemap_svg.attr("width")
+    const bubblemap_height = +bubblemap_svg.attr("height");
 
 bubblemap_plotter(bubblemap_width,bubblemap_height,bubblemap_svg,
     "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson",

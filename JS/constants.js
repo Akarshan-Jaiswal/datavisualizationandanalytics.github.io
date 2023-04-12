@@ -1,4 +1,4 @@
-var selected_country = ""
+let selected_country = "";
 
 function openTab(evt, tabName) {
     // Get all elements with class="tab-pane" and hide them
@@ -16,6 +16,12 @@ function openTab(evt, tabName) {
     evt.currentTarget.classList.add("active");
 
     if (d3.select(`#${tabName}`).attr("data-position") === "start"){
+        d3.select(`#${tabName}`).style("display", "block")
+                            .transition()
+                            .duration(500)
+                            .style("opacity", "1")
+                            .attr("class", "tab-pane active landing-page");
+        evt.currentTarget.classList.add("landing-page");
       d3.select("#floating-previous").style("opacity", "0").style("display", "none").transition()
                             .duration(500);
     }else if(d3.select(`#${tabName}`).attr("data-position") === "end"){

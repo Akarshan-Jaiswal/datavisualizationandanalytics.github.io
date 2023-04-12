@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Word Cloud</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-cloud@1.2.5/build/d3.layout.cloud.js"></script>
+  </head>
+  <body>
+    <div id="word-cloud"></div>
+    <script>
+      d3.csv("words.csv").then(data => {
+        const dimensions = { width: 600, height: 400 };
+        const fontScale = d3.scaleLinear().range([10, 60]);
+
+        const layout = d3.layout
+          .cloud()
+          .size([dimensions.width, dimensions.height])
+          .words(data.map(d => ({ text: d.word, frequency: +d.frequency })))
+          .padding(5)
+          .rotate(() => Math.random() * 90)
+          .fontSize(d => fontScale(d.frequency))
+          .on("end", draw);
+
+        layout.start();
+
+        function draw(words) {
+          d3.select("#word-cloud")
+            .append("svg")
+            .attr("width", dimensions.width)
+            .attr("height", dimensions.height)
+            .append("g")
+            .attr(
+              "transform",
+              `translate(${dimensions.width / 2},${dimensions.height / 2})`
+            )
+            .selectAll("text")
+            .data(words)
+            .enter()
+            .append("text")
+            .style("font-size", d => `${d.size}px`)
+            .style("font-family", "Arial")
+            .style("fill", () => {
+              const colors = ["black", "blue", "red", "green"];
+              return colors[Math.floor(Math.random() * colors.length)];
+            })
+            .attr("text-anchor", "middle")
+            .attr(
+              "transform",
+              d => `translate(${d.x},${d.y})rotate(${d.rotate})`
+            )
+            .text(d => d.text);
+        }
+      });
+    </script>
+  </body>
+</html>

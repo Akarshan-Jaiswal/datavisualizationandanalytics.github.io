@@ -1,7 +1,7 @@
 //Making Map
 const choropleth_svg = d3.select("#choropleth_div").append("svg")
 .style('background','radial-gradient(circle, rgba(2,0,36,1) 8%, rgba(41,78,209,1) 31%, rgba(3,7,8,1) 82%)');
-    choropleth_svg.attr("width",window.innerWidth-35);
+    choropleth_svg.attr("width",window.innerWidth);
     choropleth_svg.attr("height",window.innerHeight-120);
     choropleth_svg.attr("id","globe_map");
     const choropleth_width = +choropleth_svg.attr("width")
@@ -12,7 +12,7 @@ choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
   "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1/Resources/GeoJsons/world.geojson",
   "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/22d80dbd66f2a54936e53e4f019b3f188504c760/Dataset/Average_cases/total.csv",
   ["location","total_cases"],0,[["",""]])
-  function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_path,csv_path,csv_var,map_state,map_funtions){
+function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_path,csv_path,csv_var,map_state,map_funtions){
   // Map and projection
   var stop_rotation = false;
   var is_clicked =false;

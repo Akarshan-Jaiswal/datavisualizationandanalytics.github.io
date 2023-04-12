@@ -9,14 +9,33 @@
         <title>Coursework 2 [F20DV-F21DV CW2]</title>
 
         <!-- These link tags connect external CSS files with the HTML document -->
+        <link rel="stylesheet" href="./CSS/landingstyle.css">
         <link rel="stylesheet" href="./CSS/driver.css">
+        <!--<link rel="stylesheet" href="./CSS/landingstyle.css">-->
+
+        <!-- This meta tag holds the name of the document author -->
+        <meta name="author" content="Akarshan Jaiswal">
     </head>
     <body>
         <script src="https://d3js.org/d3.v7.min.js"></script>
-        <button id="floating-previous" class="floating-btn floating-btn-left" onclick="openTab(event, 'tab-1')" style="display: none;" style="opacity: 0;"><</button>
+        <button id="floating-previous" class="floating-btn floating-btn-left" 
+        onclick="openTab(event, 'tab-1')" style="display: none;" style="opacity: 0;"><</button>
         <button id="floating-next" class="floating-btn floating-btn-right" onclick="openTab(event, 'tab-2')">></button>
         <script type="text/javascript" src="./JS/constants.js"></script>
-        <div id="tab-1" class="tab-pane active" data-internalid=1 data-position="start">
+        <!-- The different sections -->
+        <div id="tab-1" class="tab-pane active landing-page" data-internalid=1 data-position="start">
+            <div class="page-content">
+                <h1>GDP & Billionaire index Analysis</h1>
+                <h2>[ F20DV-F21DV CW2 ]</h2>
+                <!-- This paragraph defines information about the project -->
+                <p>A comprehensive data analysis and visual representation of emerging economies and successfull individuals from these countries.</p>
+
+                <!-- These div elements create four buttons that are used for navigation -->
+                <div id="choropleth_button" class="hover-text" data-content="This is some static text.">Aim</div>
+                <div id="choropleth_button" class="hover-text" 
+                data-content="You can proceed by clicking on the green arrow (>) on the right side of the page. _______________________________________ ">How to proceed.</div>
+                <div id="linechart_button" class="hover-text" data-content="Akarshan Jaiswal">Created by</div>
+            </div>
             <h2>Tab 1 Content</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nunc tellus. Donec vitae consectetur sem.</p>
         </div>
