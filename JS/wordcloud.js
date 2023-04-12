@@ -18,6 +18,7 @@ wordcloud_plotter(wordcloud_height,wordcloud_width,wordcloud_svg,
   "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW2_tests/Resources/CSV/ProcessedCSV/Wordcloud_per_country.csv",
   ["Industry","Frequency","Country"],"China",[500, 500],"Impact")
 function wordcloud_plotter(cloud_height,cloud_width,cloud_svg,csv_path,csv_var,filter_condition,font_scale,font_family){
+  cloud_svg.selectAll("g").remove();
   d3.csv(csv_path)
   .then(function(data) {
     const filteredData = data.filter(d => d[csv_var[2]] === filter_condition);

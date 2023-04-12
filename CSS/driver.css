@@ -44,7 +44,20 @@
     display: none;
     border: 1px solid #ddd;
     padding: 10px;
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
+.tab-pane h2{
+    text-align: center;
+    color: #62d146;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
 
 .tab-pane.active {
     display: block;
