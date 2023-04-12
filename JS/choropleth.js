@@ -112,6 +112,9 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
           .style("stroke", "black")
       selected_country=d3.select(this).attr("id");
       console.log("this is the selected country:" + selected_country)
+      wordcloud_plotter(wordcloud_height,wordcloud_width,wordcloud_svg,
+        "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW2_tests/Resources/CSV/ProcessedCSV/Wordcloud_per_country.csv",
+        ["Industry","Frequency","Country"],selected_country,[500, 500],"Impact");
       d3.select('body').transition()
         .duration(1500)
         .style("transform", null);
@@ -121,6 +124,7 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
       }else{
         stop_rotation = false;
         is_clicked = false;
+        selected_country=""
       }
     }
   
