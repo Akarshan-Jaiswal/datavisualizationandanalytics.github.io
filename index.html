@@ -33,18 +33,20 @@
                 <!-- These div elements create four buttons that are used for navigation -->
                 <div id="choropleth_button" class="hover-text" data-content="This is some static text.">Aim</div>
                 <div id="choropleth_button" class="hover-text" 
-                data-content="You can proceed by clicking on the green arrow (>) on the right side of the page. _______________________________________ ">How to proceed.</div>
+                data-content="You can proceed by clicking on the green arrow (>) on the right side of the page. _______________________________________ ">How to proceed</div>
                 <div id="linechart_button" class="hover-text" data-content="Akarshan Jaiswal">Created by</div>
             </div>
         </div>
         
         <div id="tab-2" class="tab-pane" data-internalid=2 data-position="mid">
-            <h2>A globe showing the Billionaire spread throughout the world</h2>
-            <div id="choropleth_div" wi></div>
+            <h2>A global view of the Billionaire spread throughout the world</h2>
+            <div id="choropleth_div"wi><div id="choropleth_tooltip_div" wi></div></div>
+            
             <script type="text/javascript" src="./JS/choropleth.js"></script>
         </div>
         
         <div id="tab-3" class="tab-pane" data-internalid=3 data-position="mid">
+            <h2>Prevalent industries in the Area</h2>
             <div id="wordcloud_div" wi></div>
             <script src="https://cdn.rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
             <script type="text/javascript" src="./JS/wordcloud.js"></script>

@@ -67,7 +67,8 @@
     display: inline-block;
     text-decoration: none;
     color: #62d146;
-    border: 2px solid #62d146;
+    border-bottom: 2px solid #62d146;
+    /*border: 2px solid #62d146;*/
     text-transform: uppercase;
     padding: 10px 20px;
     transition: 0.4s linear;
@@ -89,16 +90,16 @@
   }
     
   .hover-text:hover::after {
-      content: attr(data-content);
-      position: absolute;
-      top: 110%;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 0.5em;
-      background-color: #002488f3;
-      border: 1px solid #ddd;
-      color: #c8ffbb;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      z-index: 4;
+    content: attr(data-content);
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5em;
+    background-color: #002488f3;
+    border: 1px solid #ddd;
+    color: #c8ffbb;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 4;
   }

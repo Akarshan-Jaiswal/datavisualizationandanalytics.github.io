@@ -62,3 +62,10 @@
 .tab-pane.active {
     display: block;
 }
+#choropleth_tooltip_div{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    background:greenyellow; 
+    opacity: 0;
+}

@@ -1,27 +1,22 @@
 //Making Map
 const choropleth_svg = d3.select("#choropleth_div").append("svg")
-.style('background','radial-gradient(circle, rgba(2,0,36,1) 8%, rgba(41,78,209,1) 31%, rgba(3,7,8,1) 82%)');
+.style('background','radial-gradient(circle, rgba(2,0,36,1) 4%, rgba(41,78,209,1) 25%, rgba(3,7,8,1) 82%)');
     choropleth_svg.attr("width",window.innerWidth);
     choropleth_svg.attr("height",window.innerHeight-120);
     choropleth_svg.attr("id","globe_map");
     const choropleth_width = +choropleth_svg.attr("width")
     const choropleth_height = +choropleth_svg.attr("height");
 
-/*choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
-  [1000,10000,50000,100000,250000,750000,1000000,50000000],
-  "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1/Resources/GeoJsons/world.geojson",
-  "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/22d80dbd66f2a54936e53e4f019b3f188504c760/Dataset/Average_cases/total.csv",
-  ["location","total_cases"],0,[["",""]])*/
 choropleth_plotter(choropleth_width,choropleth_height,choropleth_svg,
-  [1000,10000,50000,100000,250000,750000,1000000,50000000],
+  [100,200,500,1000,4000,8000,10000,20000,40000,70000,90000],
   "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW1/Resources/GeoJsons/world.geojson",
-  "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/22d80dbd66f2a54936e53e4f019b3f188504c760/Dataset/Average_cases/total.csv",
-  ["location","total_cases"],0,[["",""]])
+  "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW2_tests/Resources/CSV/ProcessedCSV/totalnetworth.csv",
+  ["Country","Total_Net_Worth"],0,[["",""]])
 function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_path,csv_path,csv_var,map_state,map_funtions){
   // Map and projection
   var stop_rotation = false;
   var is_clicked =false;
-  const initialScale = 250;
+  const initialScale = 200;
   const map_projection = d3.geoOrthographic()
     .scale(initialScale)
     .center([0,0])
@@ -62,7 +57,9 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
   const data = new Map();
   const colorScale = d3.scaleThreshold()
         .domain(scale_domain)
-        .range(d3.schemeReds[9]);
+        .range(d3.schemeGreens[9])
+        //.range(d3.schemeYlGn[9]);
+        //.range(d3.schemeReds[9]);
 
       // Load external data and boot
       Promise.all([d3.json(geojson_path),
@@ -72,7 +69,7 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
       let topo = loadData[0]
   
       //Hover functions
-      let mouseOver = function(d) {
+      let mouseOver = function(d,event) {
       if(!is_clicked){
         d3.selectAll(".Country")
         .transition()
@@ -83,8 +80,16 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
         .duration(200)
         .style("opacity", 1)
         .style("stroke", "black")
-        console.log(d3.select(this).attr("id"),d3.select(this).attr("fill"))
+        console.log(d3.select(this).attr("id"),d3.select(this).attr("fill"),d3.select(this).attr("data-content"))
         //map_projection.scale(2.7*((initialScale*2)/5));
+        let tooltip = d3.select('#choropleth_tooltip_div');
+        tooltip.style('left', (event.clientX + 10) + 'px')
+          .style('top', (event.clientY + 10) + 'px')
+          .style('z-index',4)
+          .html(d3.select(this).attr('data-content'))
+          .transition()
+          .duration(200)
+          .style('opacity', 0.9);
       }
     }
   
@@ -100,6 +105,10 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
           .style("stroke", "")
           //map_projection.scale(initialScale);
           globe.attr("r",initialScale);
+          d3.select('#choropleth_tooltip_div')
+          .transition()
+          .duration(200)
+          .style('opacity', 0);
       }
     }
   
@@ -152,19 +161,26 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
         })
         .attr("title", function (d) {return d.properties.name;
         })
+        .attr("data-content",function (d) 
+        {if(d.total===0){
+          return "No Billionaire found in top 500 for \""+d.properties.name+"\"";
+        }else{
+          return "Billionaires with total net worth of "+String(d.total)+" Billion Dollars come from  \""+d.properties.name+"\"";
+        }
+        })
         .style("stroke", "transparent")
         .attr("class", function(d){ return "Country" } )
         .style("opacity", 1)
     if(map_state===0){
           final_map.on("mouseleave", mouseLeave )
           .on("click",countryClick)
-          .on("mouseover",mouseOver)
+          //.on("mouseover",mouseOver)
+          .on("mouseover",function(d) { mouseOver.call(this, d, event); })
         }else if (map_state===1){
           map_funtions.forEach(element => {
             final_map.on(element[0],element[1])
           });
         }
-
     //Optional rotate
   let then = Date.now();
   d3.timer(function(elapsed) {

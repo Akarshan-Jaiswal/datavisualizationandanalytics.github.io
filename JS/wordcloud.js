@@ -43,7 +43,7 @@ function wordcloud_plotter(cloud_height,cloud_width,cloud_svg,csv_path,csv_var,f
           .fontSize(function(d) { 
             if(d.size<10)
             {
-              return (d.size*10);
+              return (d.size*12);
             }else if(d.size<20 && d.size>10)
             {
               return (d.size*7);
@@ -55,46 +55,7 @@ function wordcloud_plotter(cloud_height,cloud_width,cloud_svg,csv_path,csv_var,f
           .on("end", draw);
     
       layout.start();
-    
-      function draw(words) {
-        cloud_svg
-          .append("g")
-            .attr("transform", "translate(" + cloud_width / 2 + "," + cloud_height / 2 + ")")
-          .selectAll("text")
-            .data(words)
-          .enter().append("text")
-            .style("font-size", function(d) { return d.size + "px"; })
-            .style("font-family", font_family)
-            .style("fill", function(d, i) { return d3.schemeCategory10[i % 10]; })
-            .attr("text-anchor", "middle")
-            .attr("transform", function(d) {
-              return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-            })
-            .text(function(d) { return d.text; });
-      }
-    }).then(function (data) {
-      const words = data.map(function(d) {
-        return { text: d[csv_var[0]], size: font_scale(+d[csv_var[1]]) };
-      });
-    
-      const layout = d3.layout.cloud()
-          .size(font_scale)
-          .words(words)
-          .padding(5)
-          .rotate(function() { return ~~(Math.random() * 2) * 90; })
-          .fontSize(function(d) { 
-            if(d.size<10)
-            {
-              return (d.size*20);
-            }else if(d.size>50)
-            {
-              return (d.size*10);
-            }
-          })
-          .on("end", draw);
-    
-      layout.start();
-    
+      
       function draw(words) {
         cloud_svg
           .append("g")
