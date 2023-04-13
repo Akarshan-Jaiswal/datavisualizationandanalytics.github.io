@@ -1,0 +1,187 @@
+Industry,Country,Total_Net_Worth,Name
+Finance,USA,19368,"Stephen Schwarzman , Abigail Johnson , James Simons , Thomas Peterffy , Ken Griffin , Ned Johnson III, Ray Dalio , David Tepper , Sam Bankman-Fried , Charles Schwab , Leon Black , George Roberts , Henry Kravis , Steve Cohen , Stan Druckenmiller , Izzy Englander , Andy Beal , Robert Smith , John Doerr , Ned Johnson IV, Elizabeth Johnson , Chase Coleman , Mat Ishbia , Josh Harris , George Soros , David Shaw , Peter Thiel , Tom Gores , Jon Gray , Mike Novogratz , Steve Feinberg , Marc Rowan , Tony Ressler , David Bonderman , Ken Fisher , Henry Laufer , Tony James "
+Technology,USA,13842,"Elon Musk , Jeff Bezos , Bill Gates , Larry Page , Sergey Brin , Mark Zuckerberg , Steve Ballmer , Larry Ellison , MacKenzie Scott , Michael Dell , Eric Schmidt , Dustin Moskovitz , Jensen Huang , Jay Chaudhry , Dave Duffield , Jim Goodnight , Jack Dorsey , Jan Koum , Eric Yuan , Robert Pera , Brian Armstrong , Marc Benioff , Pierre Omidyar , Bobby Murphy , Gordon Moore , Evan Spiegel , Tim Sweeney , David Sun , John Tu , Gabe Newell , John Sall , Lin Bin , Reed Hastings , Matthew Prince , Henry Samueli , Joe Mansueto , Mark Cuban , Barry Diller "
+Technology,China,8834,"Ma Huateng , Zhang Yiming , Jack Ma , William Ding , Colin Huang , Zhang Zhidong , Wang Xing , Lei Jun , Richard Liu , Lin Jianhua , Gong Hongjia , Robin Li , Zhou Qunfei , Cao Renxian , Qian Dongqi , He Xiaopeng , Yu Renrong , Frank Wang , Su Hua , Bin Li , Wang Yanqing , Jiang Bin , Wang Wenjing "
+Retail,USA,7113,"Jim Walton , Rob Walton , Alice Walton , Lukas Walton , John Menard , Christy Walton , Les Wexner , Michael Rubin , Charles Butt&family , Nancy Laurie , Ann Kroenke , Eric Smidt "
+Energy,USA,7031,"Harold Hamm , Richard Kinder , Terry Pegula , Lynn Schusterman , Randa Williams , Dannine Avara , Scott Duncan , Milane Frantz , Jeffery Hildebrand , Ray Hunt , Trevor Rees-Jones "
+Consumer,China,6935,"He Xiangjian , Wei Jianjun , Wang Chuan-Fu , Ma Jianrong , Lv Xiang-yang , Chen Zhiping , Ding Shizhong , Ding Shijia , Jian Jun , Leng You-Bin , Gao Dekang , Lin Muqin "
+Industrial,China,6876,"Li Shu Fu, Huang Shilin , Pei Zhenhua , Zhang Bo , Liu Hanyuan , Liu Jincheng , Liu Yongxing , Li Ping , Wang Laisheng , Wang Laichun , Chen Jianhua , Ruan Liping , Ruan Xueping "
+Consumer,USA,6863,"Phil Knight&family , Leonard Lauder , Ernie Garcia , Jim Davis , Ernest Garcia III, Jude Reyes , Chris Reyes , Ralph Lauren , Shahid Khan , Tito Beveridge , Jane Lauder "
+Media&Telecom,USA,6694,"Donald Newhouse , Charles Ergen , John Malone , Rocco Commisso , Rupert Murdoch , Blair Parry-Okeden , Jim Kennedy , Katharine Rayner , Margaretta Taylor , James Cox Chambers"
+Media&Telecom,Canada,5119,"Sherry Brydson , Taylor Thomson , David Thomson , Peter Thomson , James Pattison , Linda Campbell , Gaye Farncombe "
+Real Estate,USA,4337,"Dan Gilbert , Donald Bren , Stan Kroenke , John Albert Sobrato, Stephen Ross , Edward Roski , Leonard Stern , Sam Zell "
+Industrial,Germany,4141,"Klaus-Michael Kuehne , Susanne Klatten , Stefan Quandt , Reinhold Wuerth , Georg Schaeffler , Martin Viessmann&family , Ludwig Merckle , Peter-Alexander Wacker&family "
+Entertainment,USA,3762,"Miriam Adelson , David Geffen , Micky Arison , Jerry Jones , George Lucas , Steven Spielberg , Robert Kraft "
+Health Care,USA,3736,"Thomas Frist , Patrick Soon-Shiong , Carl Cook , Li Ge , Reinhold Schmieding , Ronda Stryker , Pat Stryker "
+Food&Beverage,USA,3619,"Jacqueline Badger Mars, John Mars , Marijke Mars , Victoria Mars , Pamela Mars-Wright , Valerie Mars , Dan Cathy , Bubba Cathy , Bob Rich "
+Industrial,Russia,3531,"Alexey Mordashov , Vladimir Lisin , Viktor Vekselberg , Andrey Melnichenko , Victor Rashnikov , Alexander Abramov , Andrey Guryev , Vyacheslav Kantor "
+Real Estate,China,3375,"Yang Huiyan , Wu Yajun , Wang Jianlin , Cai Kui , Hui Ka Yan, Kei Hoi Pang"
+Industrial,USA,3253,"Charles Koch , Julia Flesher Koch&family, Elaine Marshall , Steven Rales , Mitchell Rales , Dennis Washington "
+Health Care,China,3089,"Jiang Rensheng , Chen Bang , Sun Piaoyang , Zhong Huijuan , Cen Junda , Zhao Yan "
+Health Care,Switzerland,3054,"Hansjoerg Wyss , Andre Hoffmann , Vera Michalski-Hoffmann , Maja Hoffmann "
+Real Estate,HongKong,2965,"Li Ka-shing , Lee Shau Kee, Peter Woo , Raymond Kwok , Thomas Kwok , Geoffrey Kwok , Joseph Lau , Hui Wing Mau"
+Food&Beverage,China,2918,"Pang Kang , Qin Yinglin , Wu Shaoxun , Cheng Xue , Xu Shihui "
+Industrial,India,2862,"Gautam Adani , Kumar Birla , Ashwin Dani&family , Mahendra Choksi&family , Abhay Vakil&family "
+Services,USA,2673,"Brian Chesky , Joe Gebbia , Nathan Blecharczyk , Tammy Gustavson , Mark Shoen , Patrick Ryan "
+Diversified,England,2610,"Simon Reuben , David Reuben , Joe Lewis , Richard Branson "
+Diversified,Russia,2587,"Gennady Timchenko , Alisher Usmanov , Roman Abramovich , Mikhail Fridman , Mikhail Prokhorov , Dmitry Rybolovlev , German Khan , Alexey Kuzmichev , Petr Aven "
+Consumer,Denmark,2498,"Kjeld Kirk Kristiansen, Sofie Kirk Kristiansen, Agnete Kirk Thinggaard, Thomas Kirk Kristiansen"
+Retail,Germany,2483,"Dieter Schwarz , Karl Albrecht Jr, Beate Heister , Heinrich Deichmann&family , Theo Albrecht Jr, Michael Otto "
+Diversified,China,2332,"Zhong Shanshan , Liu Yonghao , Lu Weiding "
+Consumer,France,2185,"Bernard Arnault , Francoise Bettencourt Meyers, Francois Pinault , Alain Wertheimer , Gerard Wertheimer "
+Energy,China,2088,"Li Zhenguo , Fan Hongwei , Dang Yanbao , Jin Baofang , Li Shuirong , Wang Yusuo "
+Commodities,Mexico,1805,"Sara Mota de Larrea&family, Alberto Bailleres , German Larrea "
+Industrial,Switzerland,1758,"Magdalena Martullo , Rahel Blocher "
+Diversified,India,1715,"Nusli Wadia , Rahul Bajaj "
+Retail,Spain,1618,"Amancio Ortega , Sandra Ortega Mera"
+Finance,China,1614,"Qi Shi , Yu Yong , Zhang Lei "
+Energy,Russia,1544,"Leonid Mikhelson , Vagit Alekperov , Leonid Fedun "
+Technology,Russia,1510,"Tatyana Bakalchuk , Denis Sverdlov "
+Diversified,Israel,1507,"Shari Arison , Stef Wertheimer "
+Finance,England,1488,"Michael Platt , Chris Hohn , Nik Storonsky "
+Commodities,USA,1426,"Gwendolyn Sontheim Meyer, Pauline Keinath "
+Food&Beverage,France,1368,"Emmanuel Besnier , Jean-Pierre Cayard , Jean-Michel Besnier "
+Commodities,Russia,1271,"Vladimir Potanin , Suleiman Kerimov , Iskandar Makhmudov "
+Commodities,India,1228,"Lakshmi Mittal , Savitri Jindal , Benu Bangur "
+Consumer,Italy,1226,"Leonardo Del Vecchio, Giorgio Armani "
+Food&Beverage,Brazil,1183,"Jorge Paulo Lemann, Marcel Telles , Carlos Sicupira "
+Services,Australia,1178,"Cliff Obrecht , Melanie Perkins "
+Technology,Germany,1134,"Hasso Plattner , Dietmar Hopp , Andy Bechtolsheim "
+Diversified,France,1126,"Laurent Dassault , Marie-Helene Habert-Dassault , Thierry Dassault , Vincent Bollore "
+Consumer,England,1052,"James Dyson , Laurence Graff "
+Diversified,USA,1049,"Warren Buffett , Len Blavatnik , Carl Icahn , Philip Anschutz , Melinda French Gates"
+Commodities,Australia,1025,"Gina Rinehart , Andrew Forrest , Ivan Glasenberg "
+Retail,Japan,1006,"Tadashi Yanai , Hiroshi Mikitani "
+Technology,Canada,997,"Tobi Lutke , Joseph Tsai "
+Services,Switzerland,995,Gianluigi Aponte 
+Diversified,Korea,991,Jay Y. Lee
+Industrial,Cyprus,986,John Fredriksen 
+Finance,New Zealand,981,Graeme Hart 
+Real Estate,India,969,KP Singh  
+Finance,Singapore,961,Wee Cho Yaw
+Energy,India,958,Mukesh Ambani 
+Diversified,Germany,940,August von Finck
+Media&Telecom,France,938,Patrick Drahi 
+Health Care,Denmark,930,Niels Louis-Hansen 
+Diversified,South Africa,916,"Johann Rupert&family , Nicky Oppenheimer "
+Finance,Colombia,909,Luis Sarmiento 
+Media&Telecom,Italy,909,Silvio Berlusconi 
+Industrial,Australia,902,Anthony Pratt 
+Diversified,Taiwan,895,Samuel Yin 
+Real Estate,Australia,892,"Harry Triguboff , Frank Lowy "
+Industrial,England,892,"Jim Ratcliffe , Anthony Bamford&family "
+Consumer,Canada,885,Anthony von Mandl
+Health Care,France,862,"Stephane Bancel , Alain Merieux "
+Real Estate,Vietnam,862,Pham Nhat Vuong
+Industrial,Japan,855,Shigenobu Nagamori 
+Technology,France,832,Xavier Niel 
+Finance,Russia,830,Oleg Tinkov 
+Entertainment,Austria,826,Johann Graf 
+Services,China,824,"Wang Wei , Lai Meisong "
+Retail,China,816,Yao Liangsong 
+Food&Beverage,South Africa,810,Natie Kirsh 
+Health Care,Sweden,806,Frederik Paulsen 
+Media&Telecom,Germany,796,Liz Mohn 
+Diversified,Mexico,784,"Carlos Slim , Ricardo Salinas "
+Food&Beverage,Mexico,782,Juan Beckmann Vidal&family
+Consumer,Japan,780,Takahisa Takahara 
+Energy,HongKong,778,"Michael Kadoorie , Ronald McAulay "
+Real Estate,England,775,"Hugh Grosvenor , Charles Cadogan "
+Technology,Switzerland,765,Guillaume Pousaz 
+Consumer,Germany,764,Horst Pudwill 
+Industrial,Taiwan,751,"Zhang Congyuan , Terry Gou "
+Services,Sweden,743,Jorn Rausing 
+Food&Beverage,Germany,740,Axel Oberwelland 
+Real Estate,Russia,739,Sergey Gordeev 
+Diversified,Philippines,735,Manuel Villar 
+Retail,Canada,735,Chip Wilson 
+Finance,Malaysia,728,Teh Hong Piow
+Energy,Saudi Arabia,720,Mohammed Al Amoudi
+Finance,Kazakhstan,718,Vyacheslav Kim 
+Technology,HongKong,702,Yeung Kin-Man 
+Real Estate,Germany,697,Alexander Otto 
+Finance,Georgia,689,Mikheil Lomtadze 
+Industrial,Egypt,687,Nassef Sawiris 
+Real Estate,Sweden,685,Fredrik Lundberg 
+Health Care,Korea,679,Seo Jung-Jin 
+Commodities,Canada,666,J K Irving
+Energy,Israel,662,Idan Ofer 
+Technology,India,658,"Azim Premji , Shiv Nadar "
+Real Estate,Norway,651,Olav Thon 
+Technology,Sweden,644,Martin Lorentzon 
+Technology,Argentina,643,Marcos Galperin 
+Food&Beverage,Taiwan,642,Tsai Eng-Meng 
+Retail,England,630,Tom Morris 
+Islands,Cayman,625,Kenneth Dart 
+Food&Beverage,UAE,613,M A Yusuff Ali
+Retail,Norway,612,Johan Johannson&family 
+Entertainment,England,610,Denise Coates 
+Finance,Norway,610,Andreas Halvorsen 
+Technology,Taiwan,609,Barry Lam 
+Technology,South Korea,608,Kim Jung-Ju 
+Diversified,Georgia,605,Bidzina Ivanishvili 
+Industrial,Finland,605,Antti Herlin 
+Media&Telecom,HongKong,599,Richard Li 
+Real Estate,UAE,592,Majid Al Futtaim
+Retail,Netherlands,588,Frits Goldschmeding 
+Industrial,HongKong,573,Zeng Yuqun 
+Technology,Japan,567,"Takemitsu Takizaki , Masayoshi Son "
+Health Care,Germany,554,"Thomas Struengmann , Andreas Struengmann , Ugur Sahin "
+Technology,Australia,554,"Scott Farquhar , Mike Cannon-Brookes "
+Energy,Canada,434,Arthur Irving 
+Diversified,Indonesia,365,"Budi Hartono , Michael Hartono "
+Food&Beverage,Italy,342,Giovanni Ferrero&family 
+Diversified,Sweden,331,"Gustaf Douglas&family , Melker Schorling "
+Industrial,Ireland,318,Pallonji Mistry 
+Technology,Singapore,317,"Forrest Li , Gang Ye "
+Health Care,India,300,"Cyrus Poonawalla , Dilip Shanghvi "
+Retail,HongKong,249,Henry Cheng 
+Retail,India,243,Radhakishan Damani 
+Technology,Ireland,228,"Patrick Collison , John Collison "
+Diversified,Switzerland,211,Ernesto Bertarelli&family 
+Commodities,Chile,210,Iris Fontbona&family 
+Health Care,Singapore,210,Li Xiting 
+Retail,Sweden,197,Stefan Persson 
+Industrial,Nigeria,192,Aliko Dangote 
+Diversified,Malaysia,190,Robert Kuok 
+ Media&Telecom,USA,189,Laurene Powell Jobs
+Health Care,HongKong,187,Xu Hang 
+Diversified,Saudi Arabia,176,Alwaleed Bin Talal
+Technology,Brazil,175,Eduardo Saverin 
+Finance,India,165,Uday Kotak 
+Food&Beverage,Netherlands,163,Charlene de Carvalho-Heineken
+Finance,Greece,161,Vicky Safra 
+Food&Beverage,Thailand,151,Charoen Sirivadhanabhakdi 
+Food&Beverage,Austria,151,Dietrich Mateschitz 
+Industrial,Singapore,147,Goh Cheng Liang
+Commodities,China,146,Wang Wenyin 
+Entertainment,HongKong,141,Lui Che-Woo 
+Health Care,Brazil,119,Jorge Moll&family 
+Food&Beverage,Colombia,117,Alejandro Santo Domingo&family
+Services,Israel,117,Eyal Ofer 
+Energy,Thailand,115,Sarath Ratanavadi 
+Media&Telecom,India,114,Sunil Mittal 
+Commodities,Italy,114,Paolo Rocca&family 
+Technology,Korea,112,Brian Kim 
+Industrial,Ukraine,111,Rinat Akhmetov 
+Industrial,Sweden,110,Antonia Axson Johnson
+Finance,Sweden,110,Carl Bennet 
+Finance,Ireland,110,John Grayken 
+Retail,Denmark,110,Anders Holch Povlsen&family
+Retail,Monaco,103,Stefano Pessina 
+Technology,World,33731,"Elon Musk , Jeff Bezos , Bill Gates , Larry Page , Sergey Brin , Mark Zuckerberg , Steve Ballmer , Larry Ellison , MacKenzie Scott , Michael Dell , Ma Huateng , Zhang Yiming , Jack Ma , Azim Premji , Takemitsu Takizaki , William Ding , Colin Huang , Shiv Nadar , Eric Schmidt , Dustin Moskovitz , Scott Farquhar , Mike Cannon-Brookes , Jensen Huang , Masayoshi Son , Zhang Zhidong , Forrest Li , Wang Xing , Lei Jun , Jay Chaudhry , Richard Liu , Dave Duffield , Eduardo Saverin , Hasso Plattner , Jim Goodnight , Jack Dorsey , Lin Jianhua , Jan Koum , Eric Yuan , Robert Pera , Gong Hongjia , Tobi Lutke , Brian Armstrong , Robin Li , Marc Benioff , Patrick Collison , John Collison , Gang Ye , Brian Kim , Pierre Omidyar , Zhou Qunfei , Bobby Murphy , Dietmar Hopp , Gordon Moore , Cao Renxian , Qian Dongqi , Evan Spiegel , Tim Sweeney , Joseph Tsai , Andy Bechtolsheim , David Sun , John Tu , Xavier Niel , Gabe Newell , He Xiaopeng , John Sall , Tatyana Bakalchuk , Lin Bin , Guillaume Pousaz , Yu Renrong , Reed Hastings , Denis Sverdlov , Yeung Kin-Man , Matthew Prince , Henry Samueli , Frank Wang , Su Hua , Martin Lorentzon , Marcos Galperin , Bin Li , Joe Mansueto , Wang Yanqing , Jiang Bin , Wang Wenjing , Barry Lam , Kim Jung-Ju , Mark Cuban , Barry Diller "
+Industrial,World,29550,"Gautam Adani , Charles Koch , Julia Flesher Koch&family, Zeng Yuqun , Klaus-Michael Kuehne , Pallonji Mistry , Li Shu Fu, Alexey Mordashov , Vladimir Lisin , Huang Shilin , Susanne Klatten , Stefan Quandt , Elaine Marshall , Aliko Dangote , Viktor Vekselberg , Andrey Melnichenko , Pei Zhenhua , Jim Ratcliffe , Goh Cheng Liang, Victor Rashnikov , Reinhold Wuerth , Zhang Bo , Zhang Congyuan , Liu Hanyuan , Kumar Birla , Liu Jincheng , Steven Rales , Rinat Akhmetov , Antonia Axson Johnson, Liu Yongxing , John Fredriksen , Li Ping , Georg Schaeffler , Alexander Abramov , Mitchell Rales , Anthony Pratt , Magdalena Martullo , Wang Laisheng , Rahel Blocher , Shigenobu Nagamori , Martin Viessmann&family , Dennis Washington , Wang Laichun , Andrey Guryev , Chen Jianhua , Anthony Bamford&family , Ludwig Merckle , Vyacheslav Kantor , Peter-Alexander Wacker&family , Ruan Liping , Ashwin Dani&family , Nassef Sawiris , Ruan Xueping , Mahendra Choksi&family , Abhay Vakil&family , Terry Gou , Antti Herlin "
+Finance,World,29442,"Stephen Schwarzman , Abigail Johnson , James Simons , Thomas Peterffy , Ken Griffin , Uday Kotak , Ned Johnson III, Vicky Safra , Ray Dalio , David Tepper , Sam Bankman-Fried , Charles Schwab , Leon Black , George Roberts , Henry Kravis , Qi Shi , Steve Cohen , Carl Bennet , John Grayken , Michael Platt , Stan Druckenmiller , Izzy Englander , Graeme Hart , Wee Cho Yaw, Andy Beal , Luis Sarmiento , Robert Smith , John Doerr , Yu Yong , Ned Johnson IV, Elizabeth Johnson , Oleg Tinkov , Chase Coleman , Mat Ishbia , Josh Harris , George Soros , David Shaw , Teh Hong Piow, Peter Thiel , Tom Gores , Vyacheslav Kim , Chris Hohn , Jon Gray , Mike Novogratz , Steve Feinberg , Mikheil Lomtadze , Nik Storonsky , Marc Rowan , Zhang Lei , Tony Ressler , David Bonderman , Ken Fisher , Henry Laufer , Tony James , Andreas Halvorsen "
+Consumer,World,23188,"Bernard Arnault , Francoise Bettencourt Meyers, Phil Knight&family , Francois Pinault , Leonard Lauder , Leonardo Del Vecchio, Alain Wertheimer , Gerard Wertheimer , He Xiangjian , Wei Jianjun , Wang Chuan-Fu , James Dyson , Ernie Garcia , Ma Jianrong , Lv Xiang-yang , Jim Davis , Chen Zhiping , Ding Shizhong , Ding Shijia , Giorgio Armani , Anthony von Mandl, Ernest Garcia III, Jude Reyes , Chris Reyes , Jian Jun , Ralph Lauren , Laurence Graff , Leng You-Bin , Takahisa Takahara , Shahid Khan , Horst Pudwill , Tito Beveridge , Jane Lauder , Gao Dekang , Kjeld Kirk Kristiansen, Sofie Kirk Kristiansen, Agnete Kirk Thinggaard, Thomas Kirk Kristiansen, Lin Muqin "
+Diversified,World,20065,"Warren Buffett , Zhong Shanshan , Carlos Slim , Len Blavatnik , Gennady Timchenko , Carl Icahn , Alisher Usmanov , Ernesto Bertarelli&family , Gustaf Douglas&family , Robert Kuok , Roman Abramovich , Budi Hartono , Michael Hartono , Alwaleed Bin Talal, Mikhail Fridman , Ricardo Salinas , Philip Anschutz , Mikhail Prokhorov , Melker Schorling , Melinda French Gates, Dmitry Rybolovlev , German Khan , Laurent Dassault , Marie-Helene Habert-Dassault , Thierry Dassault , Johann Rupert&family , Jay Y. Lee, Liu Yonghao , August von Finck, Samuel Yin , Nusli Wadia , Rahul Bajaj , Vincent Bollore , Nicky Oppenheimer , Alexey Kuzmichev , Shari Arison , Stef Wertheimer , Manuel Villar , Lu Weiding , Simon Reuben , David Reuben , Petr Aven , Joe Lewis , Richard Branson , Bidzina Ivanishvili "
+Real Estate,World,17539,"Li Ka-shing , Dan Gilbert , Yang Huiyan , Lee Shau Kee, Peter Woo , Donald Bren , Wu Yajun , Hugh Grosvenor , Raymond Kwok , Stan Kroenke , Thomas Kwok , Harry Triguboff , John Albert Sobrato, KP Singh  , Pham Nhat Vuong, Stephen Ross , Wang Jianlin , Cai Kui , Frank Lowy , Sergey Gordeev , Hui Ka Yan, Geoffrey Kwok , Alexander Otto , Fredrik Lundberg , Joseph Lau , Edward Roski , Olav Thon , Charles Cadogan , Leonard Stern , Sam Zell , Hui Wing Mau, Kei Hoi Pang, Majid Al Futtaim"
+Retail,World,16503,"Amancio Ortega , Jim Walton , Rob Walton , Alice Walton , Tadashi Yanai , Dieter Schwarz , Henry Cheng , Radhakishan Damani , Lukas Walton , John Menard , Stefan Persson , Karl Albrecht Jr, Beate Heister , Anders Holch Povlsen&family, Heinrich Deichmann&family , Christy Walton , Stefano Pessina , Les Wexner , Theo Albrecht Jr, Michael Otto , Sandra Ortega Mera, Michael Rubin , Yao Liangsong , Charles Butt&family , Nancy Laurie , Chip Wilson , Hiroshi Mikitani , Ann Kroenke , Tom Morris , Johan Johannson&family , Eric Smidt , Frits Goldschmeding "
+Media&Telecom,World,15169,"Donald Newhouse , Sherry Brydson , Charles Ergen , Sunil Mittal , John Malone , Patrick Drahi , Rocco Commisso , Rupert Murdoch , Silvio Berlusconi , Taylor Thomson , David Thomson , Peter Thomson , Blair Parry-Okeden , Jim Kennedy , James Pattison , Liz Mohn , Linda Campbell , Gaye Farncombe , Richard Li , Katharine Rayner , Margaretta Taylor , James Cox Chambers"
+Health Care,World,14526,"Thomas Frist , Thomas Struengmann , Andreas Struengmann , Li Xiting , Jiang Rensheng , Xu Hang , Chen Bang , Cyrus Poonawalla , Dilip Shanghvi , Ugur Sahin , Sun Piaoyang , Jorge Moll&family , Stephane Bancel , Patrick Soon-Shiong , Carl Cook , Li Ge , Zhong Huijuan , Niels Louis-Hansen , Hansjoerg Wyss , Reinhold Schmieding , Cen Junda , Ronda Stryker , Frederik Paulsen , Zhao Yan , Andre Hoffmann , Alain Merieux , Vera Michalski-Hoffmann , Maja Hoffmann , Seo Jung-Jin , Pat Stryker "
+Energy,World,14330,"Mukesh Ambani , Leonid Mikhelson , Vagit Alekperov , Li Zhenguo , Harold Hamm , Fan Hongwei , Dang Yanbao , Sarath Ratanavadi , Jin Baofang , Michael Kadoorie , Leonid Fedun , Richard Kinder , Li Shuirong , Wang Yusuo , Terry Pegula , Mohammed Al Amoudi, Lynn Schusterman , Randa Williams , Dannine Avara , Scott Duncan , Milane Frantz , Ronald McAulay , Idan Ofer , Jeffery Hildebrand , Arthur Irving , Ray Hunt , Trevor Rees-Jones "
+Food&Beverage,World,13599,"Jacqueline Badger Mars, John Mars , Giovanni Ferrero&family , Pang Kang , Qin Yinglin , Jorge Paulo Lemann, Charlene de Carvalho-Heineken, Charoen Sirivadhanabhakdi , Dietrich Mateschitz , Marijke Mars , Victoria Mars , Pamela Mars-Wright , Valerie Mars , Alejandro Santo Domingo&family, Emmanuel Besnier , Marcel Telles , Carlos Sicupira , Wu Shaoxun , Cheng Xue , Natie Kirsh , Xu Shihui , Juan Beckmann Vidal&family, Axel Oberwelland , Dan Cathy , Bubba Cathy , Bob Rich , Jean-Pierre Cayard , Tsai Eng-Meng , Jean-Michel Besnier , M A Yusuff Ali"
+Commodities,World,7891,"Vladimir Potanin , Lakshmi Mittal , Iris Fontbona&family , Sara Mota de Larrea&family, Gina Rinehart , Andrew Forrest , Wang Wenyin , Savitri Jindal , Paolo Rocca&family , Suleiman Kerimov , Alberto Bailleres , Benu Bangur , Iskandar Makhmudov , German Larrea , Gwendolyn Sontheim Meyer, Pauline Keinath , Ivan Glasenberg , J K Irving"
+Services,World,6530,"Wang Wei , Brian Chesky , Joe Gebbia , Nathan Blecharczyk , Eyal Ofer , Gianluigi Aponte , Tammy Gustavson , Jorn Rausing , Mark Shoen , Patrick Ryan , Lai Meisong , Cliff Obrecht , Melanie Perkins "
+Entertainment,World,5339,"Miriam Adelson , Lui Che-Woo , David Geffen , Micky Arison , Jerry Jones , George Lucas , Johann Graf , Steven Spielberg , Denise Coates , Robert Kraft "
+Islands,World,625,Kenneth Dart 
+ Media&Telecom,World,189,Laurene Powell Jobs

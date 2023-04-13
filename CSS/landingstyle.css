@@ -92,7 +92,7 @@
   .hover-text:hover::after {
     content: attr(data-content);
     position: absolute;
-    top: 120%;
+    top: 130%;
     left: 50%;
     transform: translateX(-50%);
     padding: 0.5em;
