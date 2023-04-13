@@ -10,6 +10,7 @@ wordcloud_plotter(wordcloud_height,wordcloud_width,wordcloud_svg,
   "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW2_tests/Resources/CSV/ProcessedCSV/Wordcloud_per_country.csv",
   ["Industry","Frequency","Country"],"World",[500, 500],"Impact")
 function wordcloud_plotter(cloud_height,cloud_width,cloud_svg,csv_path,csv_var,filter_condition,font_scale,font_family){
+  d3.select("#wordcloud_div_header").text("Prevalent domains of billionaire throughout \""+filter_condition+"\"")
   cloud_svg.selectAll("g").remove();
   d3.csv(csv_path)
   .then(function(data) {
@@ -38,13 +39,16 @@ function wordcloud_plotter(cloud_height,cloud_width,cloud_svg,csv_path,csv_var,f
               return (d.size*12);
             }else if(d.size<20 && d.size>10)
             {
-              return (d.size*7);
+              return (d.size*4.4);
             }else if(d.size<50 && d.size>20)
             {
-              return (d.size*5);
-            }else if(d.size>50)
+              return (d.size*2.4);
+            }else if(d.size<80 && d.size>50)
             {
-              return (d.size*3);
+              return (d.size*1.8);
+            }else if(d.size>80)
+            {
+              return (d.size*1.5);
             }
           })
           .on("end", draw);
