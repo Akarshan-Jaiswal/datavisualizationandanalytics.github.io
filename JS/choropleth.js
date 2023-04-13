@@ -143,6 +143,9 @@ function choropleth_plotter(map_width,map_height,map_svg,scale_domain,geojson_pa
         stop_rotation = false;
         is_clicked = false;
         selected_country=""
+        wordcloud_plotter(wordcloud_height,wordcloud_width,wordcloud_svg,
+          "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW2_tests/Resources/CSV/ProcessedCSV/Wordcloud_per_country.csv",
+          ["Industry","Frequency","Country"],"World",[500, 500],"Impact");
         donutchart_plotter(donutchart_width,donutchart_height,donutchart_svg,donutchart_margin,
           "https://raw.githubusercontent.com/Akarshan-Jaiswal/datavisualizationandanalytics.github.io/CW2_tests/Resources/CSV/ProcessedCSV/top500.csv",
           ["Country","Name","Total_Net_Worth"],"",0.7);
