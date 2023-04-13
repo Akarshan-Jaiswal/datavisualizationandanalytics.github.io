@@ -22,8 +22,10 @@ function openTab(evt, tabName) {
                             .style("opacity", "1")
                             .attr("class", "tab-pane active landing-page");
         evt.currentTarget.classList.add("landing-page");
-      d3.select("#floating-previous").style("opacity", "0").style("display", "none").transition()
+        if(tabName==="tab-1"){
+          d3.select("#floating-previous").style("opacity", "0").style("display", "none").transition()
                             .duration(500);
+        }
     }else if(d3.select(`#${tabName}`).attr("data-position") === "end"){
       d3.select("#floating-next").style("opacity", "0").style("display", "none").transition()
                             .duration(500);
