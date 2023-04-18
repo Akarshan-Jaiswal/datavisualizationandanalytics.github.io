@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+<div id="word-cloud"></div>
+<script>
+  const words = [
+    { text: "Lorem", size: 40 },
+    { text: "ipsum", size: 30 },
+    { text: "dolor", size: 20 },
+    { text: "sit", size: 10 },
+    { text: "amet", size: 40 },
+    { text: "consectetur", size: 30 },
+    { text: "adipiscing", size: 20 },
+    { text: "elit", size: 10 }
+  ];
+
+  const layout = d3.layout.cloud()
+      .size([500, 500])
+      .words(words)
+      .padding(5)
+      .rotate(function() { return ~~(Math.random() * 2) * 90; })
+      .fontSize(function(d) { return d.size; })
+      .on("end", draw);
+
+  layout.start();
+
+  function draw(words) {
+    d3.select("#word-cloud").append("svg")
+        .attr("width", layout.size()[0])
+        .attr("height", layout.size()[1])
+      .append("g")
+        .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+      .selectAll("text")
+        .data(words)
+      .enter().append("text")
+        .style("font-size", function(d) { return d.size + "px"; })
+        .style("font-family", "Impact")
+        .style("fill", function(d, i) { return d3.schemeCategory10[i % 10]; })
+        .attr("text-anchor", "middle")
+        .attr("transform", function(d) {
+          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+        })
+        .text(function(d) { return d.text; });
+  }
+</script>
+
+

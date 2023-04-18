@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+  }
+  .landing-page{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  .landing-page::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./../Resources/Images/stocks.jpeg) no-repeat;
+    background-size: cover;
+    opacity: .3;
+    animation: anim 25s linear infinite;
+  }
+  @keyframes anim {
+    50%{
+      transform: scale(2);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  .page-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 1500px;
+    text-align: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  .page-content h1{
+    color: #62d146;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .page-content h2{
+    color: #62d146;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .page-content p{
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .page-content div{
+    margin-top: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: #62d146;
+    border-bottom: 2px solid #62d146;
+    /*border: 2px solid #62d146;*/
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: 0.4s linear;
+  }
+  .page-content div:hover{
+    color: #fff;
+    background: #62d146;
+  }
+  .text{
+    padding: 10px;
+    text-align: justify;
+  }
+  .text div{
+    margin-bottom: 6px;
+  }
+  .hover-text {
+    position: relative;
+    font-size: 20px;
+  }
+    
+  .hover-text:hover::after {
+    content: attr(data-content);
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5em;
+    background-color: #002488f3;
+    border: 1px solid #ddd;
+    color: #c8ffbb;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 4;
+  }

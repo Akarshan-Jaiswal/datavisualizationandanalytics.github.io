@@ -1,0 +1,187 @@
+Country,Industry,Frequency
+Argentina,Technology,1
+Australia,Technology,2
+Australia,Real Estate,2
+Australia,Commodities,3
+Australia,Services,2
+Australia,Industrial,1
+Austria,Entertainment,1
+Austria,Food&Beverage,1
+Brazil,Technology,1
+Brazil,Health Care,1
+Brazil,Food&Beverage,3
+Canada,Retail,1
+Canada,Energy,1
+Canada,Technology,2
+Canada,Consumer,1
+Canada,Media&Telecom,7
+Canada,Commodities,1
+Cayman,Islands,1
+Chile,Commodities,1
+China,Energy,6
+China,Retail,1
+China,Technology,23
+China,Consumer,12
+China,Diversified,3
+China,Real Estate,6
+China,Food&Beverage,5
+China,Finance,3
+China,Commodities,1
+China,Services,2
+China,Health Care,6
+China,Industrial,13
+Colombia,Finance,1
+Colombia,Food&Beverage,1
+Cyprus,Industrial,1
+Denmark,Retail,1
+Denmark,Health Care,1
+Denmark,Consumer,4
+Egypt,Industrial,1
+Finland,Industrial,1
+France,Technology,1
+France,Consumer,5
+France,Media&Telecom,1
+France,Diversified,4
+France,Food&Beverage,3
+France,Health Care,2
+Georgia,Finance,1
+Georgia,Diversified,1
+Germany,Retail,6
+Germany,Technology,3
+Germany,Consumer,1
+Germany,Media&Telecom,1
+Germany,Diversified,1
+Germany,Food&Beverage,1
+Germany,Real Estate,1
+Germany,Health Care,3
+Germany,Industrial,8
+Greece,Finance,1
+HongKong,Entertainment,1
+HongKong,Retail,1
+HongKong,Energy,2
+HongKong,Technology,1
+HongKong,Media&Telecom,1
+HongKong,Real Estate,8
+HongKong,Health Care,1
+HongKong,Industrial,1
+India,Energy,1
+India,Retail,1
+India,Technology,2
+India,Media&Telecom,1
+India,Diversified,2
+India,Real Estate,1
+India,Finance,1
+India,Commodities,3
+India,Health Care,2
+India,Industrial,5
+Indonesia,Diversified,2
+Ireland,Finance,1
+Ireland,Technology,2
+Ireland,Industrial,1
+Israel,Energy,1
+Israel,Services,1
+Israel,Diversified,2
+Italy,Consumer,2
+Italy,Food&Beverage,1
+Italy,Commodities,1
+Italy,Media&Telecom,1
+Japan,Retail,2
+Japan,Technology,2
+Japan,Consumer,1
+Japan,Industrial,1
+Kazakhstan,Finance,1
+Korea,Technology,1
+Korea,Diversified,1
+Korea,Health Care,1
+Malaysia,Finance,1
+Malaysia,Diversified,1
+Mexico,Commodities,3
+Mexico,Diversified,2
+Mexico,Food&Beverage,1
+Monaco,Retail,1
+Netherlands,Retail,1
+Netherlands,Food&Beverage,1
+New Zealand,Finance,1
+Nigeria,Industrial,1
+Norway,Retail,1
+Norway,Real Estate,1
+Norway,Finance,1
+Philippines,Diversified,1
+Russia,Energy,3
+Russia,Technology,2
+Russia,Diversified,9
+Russia,Real Estate,1
+Russia,Finance,1
+Russia,Commodities,3
+Russia,Industrial,8
+Saudi Arabia,Energy,1
+Saudi Arabia,Diversified,1
+Singapore,Finance,1
+Singapore,Technology,2
+Singapore,Health Care,1
+Singapore,Industrial,1
+South Africa,Diversified,2
+South Africa,Food&Beverage,1
+South Korea,Technology,1
+Spain,Retail,2
+Sweden,Retail,1
+Sweden,Technology,1
+Sweden,Diversified,2
+Sweden,Real Estate,1
+Sweden,Finance,1
+Sweden,Services,1
+Sweden,Health Care,1
+Sweden,Industrial,1
+Switzerland,Technology,1
+Switzerland,Diversified,1
+Switzerland,Services,1
+Switzerland,Health Care,4
+Switzerland,Industrial,2
+Taiwan,Technology,1
+Taiwan,Diversified,1
+Taiwan,Food&Beverage,1
+Taiwan,Industrial,2
+Thailand,Energy,1
+Thailand,Food&Beverage,1
+UAE,Food&Beverage,1
+UAE,Real Estate,1
+Ukraine,Industrial,1
+England,Entertainment,1
+England,Retail,1
+England,Consumer,2
+England,Diversified,4
+England,Real Estate,2
+England,Finance,3
+England,Industrial,2
+USA,Entertainment,7
+USA,Commodities,2
+USA,Retail,12
+USA,Energy,11
+USA,Technology,38
+USA, Media&Telecom,1
+USA,Consumer,11
+USA,Media&Telecom,10
+USA,Diversified,5
+USA,Food&Beverage,9
+USA,Real Estate,8
+USA,Finance,37
+USA,Services,6
+USA,Health Care,7
+USA,Industrial,6
+Vietnam,Real Estate,1
+World,Technology,87
+World,Industrial,57
+World,Finance,55
+World,Diversified,45
+World,Consumer,39
+World,Real Estate,33
+World,Retail,32
+World,Food&Beverage,30
+World,Health Care,30
+World,Energy,27
+World,Media&Telecom,22
+World,Commodities,18
+World,Services,13
+World,Entertainment,10
+World, Media&Telecom,1
+World,Islands,1

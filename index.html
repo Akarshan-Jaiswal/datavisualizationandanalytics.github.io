@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!-- This meta tag sets character encoding for the document -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- The title element defines the title of the document --> 
+        <title>Coursework 2 [F20DV-F21DV CW2]</title>
+
+        <!-- These link tags connect external CSS files with the HTML document -->
+        <link rel="stylesheet" href="./CSS/landingstyle.css">
+        <link rel="stylesheet" href="./CSS/driver.css">
+        <!--<link rel="stylesheet" href="./CSS/landingstyle.css">-->
+
+        <!-- This meta tag holds the name of the document author -->
+        <meta name="author" content="Akarshan Jaiswal">
+    </head>
+    <body>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <button id="floating-previous" class="floating-btn floating-btn-left" 
+        onclick="openTab(event, 'tab-1')" style="display: none;" style="opacity: 0;"><</button>
+        <button id="floating-next" class="floating-btn floating-btn-right" onclick="openTab(event, 'tab-2')">></button>
+        <script type="text/javascript" src="./JS/constants.js"></script>
+        <!-- The different sections -->
+        <div id="tab-1" class="tab-pane active landing-page" data-internalid=1 data-position="start">
+            <div class="page-content">
+                <h1>GDP & Billionaire index Analysis</h1>
+                <h2>[ F20DV-F21DV CW2 ]</h2>
+                <!-- This paragraph defines information about the project -->
+                <p>A comprehensive data analysis and visual representation of successfull individuals and emerging economies with Technological background.</p>
+
+                <!-- These div elements are for info -->
+                <div class="hover-text" 
+                data-content="The aim of this coursework is to demonstrate the Technological impact in mordern times for successfull individuals. ____________________________________________________________">Aim</div>
+                <div class="hover-text" 
+                data-content="You can proceed by clicking on the green arrow (>) on the right side of the page. _______________________________________ ">How to proceed</div>
+                <div class="hover-text" data-content="Akarshan Jaiswal [ H00425264 ] __________________________________">Created by</div>
+            </div>
+        </div>
+        
+        <div id="tab-2" class="tab-pane" data-internalid=2 data-position="mid">
+            <h2>A global view of the Billionaire spread throughout the world</h2>
+            <div id="choropleth_div"wi><div id="choropleth_tooltip_div" wi></div></div>
+            <script type="text/javascript" src="./JS/choropleth.js"></script>
+            <script type="text/javascript" src="./JS/donutchart.js"></script>
+        </div>
+        
+        <div id="tab-3" class="tab-pane" data-internalid=3 data-position="mid">
+            <h2 id="wordcloud_div_header">Prevalent industries in the Area</h2>
+            <div id="wordcloud_div" wi></div>
+            <script src="https://cdn.rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+            <script type="text/javascript" src="./JS/wordcloud.js"></script>
+        </div>
+        <div id="tab-4" class="tab-pane" data-internalid=4 data-position="start">
+            <div class="page-content">
+                <h1>Growing impact of Technology</h1>
+                <h2>As we observed from the various word clouds in the previous section.</h2>
+                <h2>We can easily conclude that technology plays a major role in these different parts of the world for successfull individuals.</h2>
+                <h2>As majority of the nations with big contribution to Billionaires have a significant contribution in Technology itself.</h2>
+
+                <!-- These div elements are for info -->
+                <div class="hover-text" 
+                data-content="We can explore more word clouds by going back to the previous section by clicking on the green arrow (<) on the left side. ____________________________________________________________">Explore more Word clouds</div>
+                <div class="hover-text" 
+                data-content="We can proceed to 'Analysis on Top 10 countries contributing to GDP' clicking on the green arrow (>) on the right side of the page. _______________________________________ ">Proceed to next</div>
+            </div>
+        </div>
+
+        <div id="tab-5" class="tab-pane" data-internalid=5 data-position="mid">
+            <h2>Top 10 countries according to GDP Years(2000-2020)</h2>
+            <div id="stackedarea_div" wi></div>
+            <script type="text/javascript" src="./JS/stackedarea.js"></script>
+        </div>
+        <div id="tab-6" class="tab-pane" data-internalid=6 data-position="start">
+            <div class="page-content">
+                <h1>As Technological advancements occured individuals progressed</h1>
+                <h2>As we observed in the previous section.</h2>
+                <h2>Advancements in technology not only helped in successfull individuals but also in successfull economies too.</h2>
+
+                <div class="hover-text" 
+                data-content="We can proceed to 'Billionaire Concentration with Technology as the primary Domain' clicking on the green arrow (>) on the right side of the page. _______________________________________ ">Proceed to next</div>
+            </div>
+        </div>
+        <div id="tab-7" class="tab-pane" data-internalid=7 data-position="mid">
+            <h2>Concentration of Billionaire with Technology as the primary Domain</h2>
+            <div id="bubblemap_div" wi></div>
+            <script type="text/javascript" src="./JS/bubblemap.js"></script>
+        </div>
+        <div id="tab-8" class="tab-pane" data-internalid=8 data-position="start">
+            <div class="page-content">
+                <h1>Possible Technological centers for future successfull individuals.</h1>
+                <h2>As we observed in the previous section.</h2>
+                <h2>There are still many countries that might produce more successfull individuals by observing the use of technology throughout the globe.</h2>
+                <!-- These div elements are for info -->
+                <div class="hover-text" 
+                data-content="This concludes our anlysis please proceed to end by clicking on the green arrow (>) on the right side of the page. _____________________________________________________________ ">Proceed to next</div>
+            </div>
+        </div>
+        <div id="tab-9" class="tab-pane" data-internalid=9 data-position="end">
+            <h2>Thank You</h2>
+        </div>
+    </body>
+</html>
