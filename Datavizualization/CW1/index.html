@@ -1,0 +1,104 @@
+<!--This is an HTML code, which defines the document type, language and direction of text.-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- This meta tag sets character encoding for the document -->
+    <meta charset="utf-8">
+    
+    <!-- The title element defines the title of the document --> 
+    <title>Coursework 1 [F20DV-F21DV CW1]</title>
+
+    <!-- These link tags connect external CSS files with the HTML document -->
+    <link rel="stylesheet" href="./CSS/landingstyle.css">
+    <link rel="stylesheet" href="./CSS/option.css">
+    <link rel="stylesheet" href="./CSS/topbutton.css">
+
+    <!-- This meta tag sets the viewport data for responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- This meta tag holds the name of the document author -->
+    <meta name="author" content="Akarshan Jaiswal">
+</head>
+
+<body>
+    <!-- This script tag includes a JavaScript file in the HTML document-->
+    <script type="text/javascript" src="./JS/d3.v7.js"></script>
+
+    <!-- This button navigates the window to the top of the page when clicked -->
+    <button id="To_topBtn" ></button>
+
+    <!-- This script tag loads a JavaScript file into the HTML document -->
+    <script type="text/javascript" src="./JS/constants.js"></script>
+
+    <!-- This div element contains the initial landing UI structure -->
+    <div class="landing-page">
+        <div class="page-content">
+            <!-- This SVG element creates a logo-->
+            <svg class="logo"></svg>
+            <h1>Covid Data Analysis [F20DV-F21DV CW1] </h1>
+
+            <!-- This paragraph defines information about the project -->
+            <p>Data Analysis and Visual representation of Covid pandamic</p>
+
+            <!-- These div elements create four buttons that are used for navigation -->
+            <div id="choropleth_button" onclick="toChoroplethFunction()">Covid Map</div>
+            <div id="linechart_button" onclick="toLineChartFunction()">Time distribution of Covid cases</div>
+            <div id="scatterplot_button" onclick="toScatterPlotFunction()">Scatter plots</div>
+            <div id="streamgraph_button" onclick="toStreamGraphFunction()">Total Contribution of continents in cases</div>
+        </div>
+    </div>
+
+    <!-- This div element contains a Choropleth visualization of Covid cases worldwide -->
+    <div id="choropleth_div" wi></div>
+    <script type="text/javascript" src="./JS/choropleth.js"></script>
+
+    <!-- This div element contains a line chart visualization of Covid cases over time -->
+    <div id="linechart_div" wi></div>
+    <script type="text/javascript" src="./JS/linechart.js"></script>
+
+    <!-- This div element contains a scatterplot visualization of Covid data by cases and deaths -->
+    <div id="scatterplot" class="text" wi>
+    <div>
+        
+    </div>
+        <div display="inline-block">
+            <!-- These inputs allow the user to select the axes they want to see on the scatter plot-->
+            <select name="parameter 1" id="parameter_sc_1" onchange="selection_sc()">
+                <option value="">--Please choose an option for X axis--</option>
+                <option value="new_cases">New Cases</option>
+                <option value="reproduction_rate">Reproduction Rate</option>
+                <option value="gdp_per_capita">Gdp per Capita</option>
+                <option value="stringency_index">Stringency Index</option>
+                <option value="total_cases">Total Cases</option>
+                <option value="population">Population</option>
+            </select>
+            <select name="parameter 2" id="parameter_sc_2" onchange="selection_sc()">
+                <option value="">--Please choose an option for Y axis--</option>
+                <option value="new_cases">New Cases</option>
+                <option value="reproduction_rate">Reproduction Rate</option>
+                <option value="gdp_per_capita">Gdp per Capita</option>
+                <option value="stringency_index">Stringency Index</option>
+                <option value="total_cases">Total Cases</option>
+                <option value="population">Population</option>
+            </select>
+            <button id="scp_selection" onclick="submit_sc()"> Submit / Refresh plot</button>
+            <label>Change X Axis</label>
+            <input type="number" id="scatter_inputX">
+            <label>Change Y Axis</label>
+            <input type="number" id="scatter_inputY">
+            
+            <!-- This div element contains the scatter plot visualization-->
+            <div id="scatterplot_div" wi></div> 
+        </div>
+        <!-- This script tag loads a JavaScript file into the HTML document -->
+        <script type="text/javascript" src="./JS/scatterplot.js"></script>
+    </div>
+
+    <!-- This div element contains a Stream graph visualization of Covid cases over time across continents -->
+    <div id="streamgraph_div" wi></div>
+    <script type="text/javascript" src="./JS/streamgraph.js"></script>
+
+</body>
+
+</html>

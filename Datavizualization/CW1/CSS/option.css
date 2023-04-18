@@ -1,0 +1,25 @@
+#loading_{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+#cov_virus_div{
+    width: 20%;
+    height: 20%;
+    margin:auto;
+}
+.cov_virus::after{
+    width: 25%;
+    height: 50%;
+    position: absolute;
+    background-image: url(./../Resources/SVG/covid-19.svg);
+    background-repeat: no-repeat;
+    animation: cov_virus_ani 6s linear infinite;
+}
+@keyframes cov_virus_ani {
+    
+    to{
+        transform: rotate(360deg);
+    }
+}
